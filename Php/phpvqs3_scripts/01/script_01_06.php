@@ -14,7 +14,7 @@
  *	Created by: Larry Ullman
  */
 
-//print "<span style=\"font-weight: bold;\">Hello, world!</span>\n";
+print "<span style=\"font-weight: bold;\">Hello, world!</span>\n";
 
 ?>
 <!-- This is an HTML comment. -->
