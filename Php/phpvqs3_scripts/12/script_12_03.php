@@ -20,7 +20,7 @@ if ($dbc = @mysql_connect('localhost', 'username', 'password')) {
 		print '<p>The database has been created!</p>';
 		
 	} else { // Could not create it.
-		print '<p style="color: red;">Could not create the database because:<br />' . mysql_error() . '.</p>');
+		print '<p style="color: red;">Could not create the database because:<br />' . mysql_error() . '.</p>' ;
 	}
 	
 	// Try to select the database:
