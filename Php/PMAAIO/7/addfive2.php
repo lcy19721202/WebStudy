@@ -1,9 +1,8 @@
 <?php
-function addFive(&$num)
-{
+function addFive(&$num) {
 	$num += 5;
 }
 $orignum = 10;
-addFive($orignum);
+addFive ( $orignum );
 echo $orignum;
 ?>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Radial gradient test</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link href='http://fonts.googleapis.com/css?family=Acme'
+	rel='stylesheet' type='text/css'>
+
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Acme', sans-serif;
+	margin: 0;
+}
+
+article {
+	width: 200px;
+	height: 200px;
+	margin: 5rem auto;
+	border: 1px solid black;
+}
+
+.grad1 {
+	background: -webkit-radial-gradient(50% 50%, 60% 60%, rgb(75, 75, 255),
+		rgb(0, 0, 0));
+	background: -moz-radial-gradient(50% 50%, 60% 60%, rgb(75, 75, 255),
+		rgb(0, 0, 0));
+	background: -ms-radial-gradient(50% 50%, 60% 60%, rgb(75, 75, 255),
+		rgb(0, 0, 0));
+	background: -o-radial-gradient(50% 50%, 60% 60%, rgb(75, 75, 255),
+		rgb(0, 0, 0));
+	background: radial-gradient(50% 50%, 60% 60%, rgb(75, 75, 255),
+		rgb(0, 0, 0));
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<article class="grad1"></article>
+
+
+</body>
+</html>

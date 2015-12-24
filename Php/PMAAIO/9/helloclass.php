@@ -4,6 +4,6 @@ class myClass {
 		echo "HELLO!";
 	}
 }
-$object1 = new myClass();
-$object1 -> sayHello();
+$object1 = new myClass ();
+$object1->sayHello ();
 ?>

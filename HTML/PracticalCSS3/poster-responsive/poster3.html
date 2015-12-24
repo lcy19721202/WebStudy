@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Responsive poster</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="poster3.css">
+<!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="ie-fixes.css">
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+<!--[if lt IE 8]>
+      <link rel="stylesheet" type="text/css" href="ie67-fixes.css">
+    <![endif]-->
+
+</head>
+<body>
+
+	<section id="ad" tabindex="0">
+
+		<video autoplay loop width="720" height="300">
+			<source src="rocking.mp4" type="video/mp4">
+    <source src="rocking.webm" type="video/webm">
+    <img src="poster.jpg" alt=""> 
+  
+		</video>
+
+
+		<div id="video-frame"></div>
+
+		<div id="frame1">
+
+			<hgroup>
+				<h1>
+					<span id="band-name"><span id="cap">D</span>ead Hamster</span> <span
+						id="album-name">Live in <span id="hell">Hell</span></span>
+				</h1>
+				<h2>SHP presents</h2>
+			</hgroup>
+
+			<ul>
+				<li>Buy the album, on <del>MP3</del> <del>CD</del> <del>WTF
+						vinyl</del> <ins>All formats!</ins></li>
+				<li>Come see them live!</li>
+			</ul>
+
+		</div>
+
+		<div id="frame2">
+
+
+			<p>
+				The four hearsemen of the rock apocalyse are back! After the death
+				of their twelfth drummer — Wilheim <q>Dungbeetle</q> Protozoa — in a
+				freak farming accident, they took up arms and came up with a skull
+				crushing new three hour metal opus: <em>Live in Hell</em>.
+			</p>
+
+		</div>
+
+	</section>
+
+	<script>
+  var video1 = document.querySelector('video');
+    
+  video1.addEventListener('loadedmetadata', function(){
+    this.muted = true;
+  },false);
+  
+  video1.addEventListener('ended', function(){
+    this.play();
+  },false);
+  </script>
+
+
+	<h3>Test</h3>
+
+</body>
+</html>

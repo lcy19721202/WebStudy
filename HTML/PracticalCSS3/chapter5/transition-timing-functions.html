@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Testing the effects of different
+	transition-timing-function values</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+@font-face {
+	font-family: 'MEgalopolisExtraRegular';
+	src: url('fonts/megalopolisextra-webfont.eot');
+	src: url('fonts/megalopolisextra-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('fonts/megalopolisextra-webfont.woff') format('woff'),
+		url('fonts/megalopolisextra-webfont.ttf') format('truetype'),
+		url('fonts/megalopolisextra-webfont.svg#MEgalopolisExtraRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: MEgalopolisExtraRegular;
+}
+
+div div {
+	height: 100px;
+	width: 25%;
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)
+		70%);
+	box-shadow: inset 0 -10px 25px rgba(0, 0, 0, 0.4);
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 3s;
+	-moz-transition-property: width;
+	-moz-transition-duration: 3s;
+	-ms-transition-property: width;
+	-ms-transition-duration: 3s;
+	-o-transition-property: width;
+	-o-transition-duration: 3s;
+	transition-property: width;
+	transition-duration: 3s;
+}
+
+p {
+	position: absolute;
+	z-index: 2;
+	font-size: 2em;
+	text-shadow: 1px 1px -1px rgba(255, 255, 255, 0.4);
+}
+
+#wrapper:hover div,#wrapper:focus div {
+	width: 100%;
+}
+
+#timing1 {
+	background-color: blue;
+	-webkit-transition-timing-function: linear;
+	-moz-transition-timing-function: linear;
+	-ms-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+
+#timing2 {
+	background-color: red;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-ms-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+#timing3 {
+	background-color: yellow;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+#timing4 {
+	background-color: purple;
+	-webkit-transition-timing-function: ease-in;
+	-moz-transition-timing-function: ease-in;
+	-ms-transition-timing-function: ease-in;
+	-o-transition-timing-function: ease-in;
+	transition-timing-function: ease-in;
+}
+
+#timing5 {
+	background-color: green;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-ms-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+
+#timing6 {
+	background-color: orange;
+	-webkit-transition-timing-function: steps(7, end);
+	-moz-transition-timing-function: steps(7);
+	-ms-transition-timing-function: steps(7);
+	-o-transition-timing-function: steps(7);
+	transition-timing-function: steps(7);
+}
+
+#timing7 {
+	background-color: brown;
+	-webkit-transition-timing-function: cubic-bezier(0.25, -0.5, 0.75, 1);
+	-moz-transition-timing-function: cubic-bezier(0.25, -0.5, 0.75, 1);
+	-ms-transition-timing-function: cubic-bezier(0.25, -0.5, 0.75, 1);
+	-o-transition-timing-function: cubic-bezier(0.25, -0.5, 0.75, 1);
+	transition-timing-function: cubic-bezier(0.25, -0.5, 0.75, 1);
+}
+
+@media all and (max-height: 250px) {
+	p {
+		font-size: 1em;
+	}
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<div id="wrapper" tabindex="0">
+		<div id="timing1">
+			<p>linear</p>
+		</div>
+		<div id="timing2">
+			<p>ease</p>
+		</div>
+		<div id="timing3">
+			<p>ease-out</p>
+		</div>
+		<div id="timing4">
+			<p>ease-in</p>
+		</div>
+		<div id="timing5">
+			<p>ease-in-out</p>
+		</div>
+		<div id="timing6">
+			<p>steps(7)</p>
+		</div>
+		<div id="timing7">
+			<p>cubic-bezier(0.25,-0.5,0.75,1)</p>
+		</div>
+	</div>
+
+	<script>
+    
+    
+    function resize() {
+      var height = window.innerHeight;    
+      var wrapper = document.querySelector("#wrapper");
+      var rows = document.querySelectorAll("div div");
+    
+      wrapper.style.height = height + "px";
+    
+      for(i=0;i<7;i++) { 
+        rows[i].style.height = height/7 + "px";
+      }   
+    
+    }
+        
+    window.onload = resize();
+    
+    var el1 = window;   
+    el1.addEventListener("resize", resize, false);
+    </script>
+
+</body>
+</html>

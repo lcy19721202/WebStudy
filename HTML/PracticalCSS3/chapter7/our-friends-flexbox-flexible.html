@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Our friends in the wild with flexbox; flexy articles</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link
+	href='http://fonts.googleapis.com/css?family=Lobster|Terminal+Dosis'
+	rel='stylesheet' type='text/css'>
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+/* || all the other stuff */
+html {
+	font-family: 'Terminal Dosis', sans-serif;
+	font-size: 62.5%;
+}
+
+h1,h2,h3 {
+	font-family: 'Lobster', cursive;
+}
+
+h2 {
+	font-size: 3.2rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+p,li {
+	font-size: 1.4rem;
+}
+
+article p {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+header {
+	height: 300px;
+	width: 100%;
+	background: url(images/sunset.jpg) center;
+}
+
+footer {
+	width: 100%;
+	color: #FCFE03;
+	background-color: #8B2101;
+	padding: 2rem 0 2rem 0;
+}
+
+footer ul,footer h2 {
+	padding-left: 2rem;
+	margin: 0;
+}
+
+footer a {
+	color: #FCFE03;
+}
+
+article h2 {
+	padding-top: 0;
+	text-align: center;
+}
+
+article img {
+	display: block;
+	padding: 1rem;
+	border: 1px solid black;
+	border-radius: 1rem;
+	box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.7);
+	background-color: white;
+	max-width: 75%;
+}
+
+html {
+	background-image: url(images/junglepattern.jpg);
+}
+
+#cast {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+
+#cast h2 {
+	-webkit-column-span: all;
+	-moz-column-span: all;
+	column-span: all;
+}
+
+.character {
+	max-height: 40rem;
+	padding-bottom: 2rem;
+}
+
+/* || Flex box stuff */
+section {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	-moz-flex-flow: row;
+	-ms-flex-flow: row;
+	-o-flex-flow: row;
+	flex-flow: row;
+}
+
+article {
+	padding: 1rem 2rem;
+	margin: 1rem;
+	border-radius: 20px;
+	-webkit-order: 2;
+	-moz-order: 2;
+	-ms-order: 2;
+	-o-order: 2;
+	order: 2;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+article:nth-of-type(2) {
+	-webkit-order: 1;
+	-moz-order: 1;
+	-ms-order: 1;
+	-o-order: 1;
+	order: 1;
+}
+
+header {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	-moz-flex-flow: column;
+	-ms-flex-flow: column;
+	-o-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
+	align-items: center;
+}
+
+h1 {
+	font-size: 5.4rem;
+	text-shadow: 1px 1px 1px #FCFE03;
+	width: 500px;
+	text-align: center;
+}
+
+header p {
+	width: 75%;
+	color: #FCFE03;
+	max-width: 500px;
+	text-align: center;
+}
+
+#cast {
+	-webkit-flex: 1 400px;
+	-moz-flex: 1 400px;
+	-ms-flex: 1 400px;
+	-o-flex: 1 400px;
+	flex: 1 400px;
+}
+
+#facts {
+	-webkit-flex: 1 250px;
+	-moz-flex: 1 250px;
+	-ms-flex: 1 250px;
+	-o-flex: 1 250px;
+	flex: 1 250px;
+}
+
+#plot {
+	-webkit-flex: 1 250px;
+	-moz-flex: 1 250px;
+	-ms-flex: 1 250px;
+	-o-flex: 1 250px;
+	flex: 1 250px;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+      <link rel="stylesheet" type="text/css" href="iefixes.css">
+    <![endif]-->
+
+</head>
+<body>
+
+	<header>
+		<h1>Our friends in the wild</h1>
+		<p>Catch up with the zany antics of our wildlife companions. It's
+			nothing but fun when those guys and gals meet up! This endearing
+			movie contains at least 57% of the typical amount of heartwarming
+			friendship and adventure of the average Disney movie.</p>
+	</header>
+
+	<section id="main">
+
+		<article id="cast">
+			<h2>The cast</h2>
+
+			<div class="character">
+				<h3>Pete the crocodile</h3>
+				<img src="images/crocodile.jpg" alt="a mean looking crocodile">
+			</div>
+
+			<div class="character">
+				<h3>Armani the lion</h3>
+				<img src="images/lion.jpg" alt="a slightly scruffy, wild eyed Lion">
+			</div>
+
+			<div class="character">
+				<h3>Bruce the dungbeetle</h3>
+				<img src="images/dungbeetle.jpg" alt="a dung beetle really close up">
+			</div>
+
+			<div class="character">
+				<h3>Lauke the warthog</h3>
+				<img src="images/warthog.jpg"
+					alt="A warthog staring into the camera">
+			</div>
+
+			<div class="character">
+				<h3>The party flamingos</h3>
+				<img src="images/flamingos.jpg" alt="A flock of flamigos">
+			</div>
+
+			<div class="character">
+				<h3>Elijah the parrot</h3>
+				<img src="images/parrot.jpg" alt="A colourful parrot">
+			</div>
+		</article>
+
+		<article id="facts">
+			<h2>Fun facts!</h2>
+			<ul>
+				<li><q>Our friends in the wild</q> is one of the most expensive
+					animated films ever made.</li>
+				<li>To create all of the authentic sound effects used in the
+					movie, over 11,000 wild animals had to be flown in and recorded in
+					the studio.</li>
+				<li>This included 3,400 Gazelles and 1,100 hippos, all
+					meticulously recorded as part of the savannah choir.</li>
+				<li>The most difficult part of the wildlife recording process
+					was the strong artistic temperament of Zimbar, who played the part
+					of Lauke the Warthog. His demands were so over the top that pat way
+					through he was taken off the project.</li>
+				<li>Ben Affleck was drafted in to finish Lauke the Warthog's
+					parts, at the last minute and at great expense.</li>
+				<li><q>Our friends in the wild</q> is set in the savannah of
+					Burkina Faso, West Africa.</li>
+				<li>This location was chosen as the setting because there were
+					worries about litigation from the creators of the Lion King. This
+					was aggravated by the fact that Dino Zoozoo, main writer of <q>Our
+						friends in the wild</q>, was cautioned by security for running amok in
+					Disney studios, shouting abusive taunts about the Lion King.
+				</li>
+				<li>The government of Burkina Faso is delighted by having a
+					major motion picture set there.</li>
+			</ul>
+
+		</article>
+
+		<article id="plot">
+			<h2>The story so far</h2>
+			<p>Our story centres around Lauke the Warthog, a plucky young
+				plains dweller who was orphaned at an early age, and raised by a
+				large pride of lions. He remembers little of his past, but he is has
+				grown into adolescence a courageous brave character. His best friend
+				is Pete the Crocodile, a depressive emo with a heart of gold, who
+				looks up to Lauke for encouragement and belonging. Lauke has the
+				heart of a lion, and fiercely stands up for his friends.</p>
+
+			<p>Lauke himself looks up to the savannah elders for wisdom and
+				insight in times of trouble. Elijah the Parrot spends most of his
+				time listening to drum and bass on his MP3 player, and may come
+				across as a frazzled old raver, but he has many a wise word to say
+				in difficult situations. And Armani the Lion, former leader of the
+				pride but long since deposed, may seem to have lost his marbles, but
+				sees and hears all.</p>
+
+			<p>The movie starts with Lauke and Pete investigating a cry for
+				help from some local gazelle kids, who came across something nasty
+				at the edges of the plains. They have seen dark spirits mobilising,
+				as if the dead themselves have been disturbed from their rest! Who
+				is at the bottom of this disturbance? Their travels open up a whole
+				world of adventure, pitting them against dark supernatural forces,
+				greedy hunters and sinister desert warriors. The key to finding the
+				answers they seek is a chance meeting with the Party flamingos, but
+				can they make them speak sense?</p>
+		</article>
+
+
+
+
+	</section>
+
+	<footer>
+
+		<h2>Photo credits</h2>
+
+		<ul>
+			<li><a href="http://www.flickr.com/photos/bensonkua/6265118065/">Crocodile
+					picture by Benson Kua</a></li>
+			<li><a href="http://www.flickr.com/photos/mdpettitt/455540703/">Parrot
+					picture by Martin Pettitt</a></li>
+			<li><a
+				href="http://www.flickr.com/photos/nilsrinaldi/5157808677/">Lion
+					picture by Nils Rinaldi</a></li>
+			<li><a
+				href="http://www.flickr.com/photos/nilsrinaldi/5158418258/">Warthog
+					picture by Nils Rinaldi</a></li>
+			<li><a href="http://www.flickr.com/photos/pedrosz/2040577615/">Flamingos
+					picture by Pedro Szekely</a></li>
+			<li><a
+				href="http://www.flickr.com/photos/27760134@N03/3859851395/">Dung
+					Beetle picture by Pete</a></li>
+			<li><a href="http://www.flickr.com/photos/johngore/259727266/">Sunset
+					picture by John Gore</a></li>
+			<li><a
+				href="http://silviahartmann.com/background-tile/3-exotic-tree-forest-background-tile.php">Jungle
+					background image by Silvia Hartmann</a></li>
+		</ul>
+
+	</footer>
+</body>
+</html>

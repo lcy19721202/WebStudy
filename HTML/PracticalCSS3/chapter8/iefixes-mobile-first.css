@@ -1,0 +1,74 @@
+/* || basic page layout and styling */
+body {
+	width: 1024px;
+}
+
+nav {
+	float: left;
+	width: 200px;
+	margin-top: 150px;
+	margin-left: 10px;
+}
+
+footer {
+	padding: 20px;
+}
+
+/* || Typography and link styling */
+h1 {
+	font-size: 100px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+nav {
+	font-size: 35px;
+}
+
+nav ul li {
+	padding-bottom: 10px;
+}
+
+nav ul:first-child {
+	padding-top: 20px;
+}
+
+footer p,footer ul {
+	font-size: 14px;
+}
+
+footer li {
+	padding-bottom: 10px;
+}
+
+/* || Media styling */
+video {
+	width: 100%;
+}
+
+#video-reel {
+	width: 480px;
+}
+
+#video-content {
+	width: 480px !important;
+}
+
+#related article {
+	margin: 20px 2%;
+	padding: 20px 3%;
+}
+
+#related img {
+	width: 100%;
+}
+
+#video-reel article {
+	width: 49%;
+}
+
+#video-reel img {
+	width: 100%;
+}

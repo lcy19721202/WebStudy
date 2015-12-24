@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Border-image example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+body {
+	background: white;
+}
+
+article {
+	width: 50%;
+	height: 300px;
+	border: 30px solid rgba(255, 255, 255, 0.1);
+	border-image: url(border.png) 30 fill round;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<article></article>
+
+</body>
+</html>

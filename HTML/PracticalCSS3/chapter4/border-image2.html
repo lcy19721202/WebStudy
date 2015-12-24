@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Border-image example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+body {
+	background: white;
+}
+
+article {
+	width: 50%;
+	height: 300px;
+	margin: 3rem auto;
+	padding: 1rem;
+	border-width: 30px 30px 30px 30px;
+	background-clip: padding-box;
+	-webkit-border-image: url(border2.png) 30 30 30 30 round round;
+	-moz-border-image: url(border2.png) 30 30 30 30 round round;
+	-ms-border-image: url(border2.png) 30 30 30 30 round round;
+	-o-border-image: url(border2.png) 30 30 30 30 round round;
+	border-image: url(border2.png) 30 30 30 30 round round;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<article></article>
+
+</body>
+</html>

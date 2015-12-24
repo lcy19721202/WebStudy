@@ -1,13 +1,13 @@
 <?php
 $mood = "sad";
 switch ($mood) {
-	case "happy":
+	case "happy" :
 		echo "Hooray! I'm in a good mood!";
 		break;
-	case "sad":
+	case "sad" :
 		echo "Awww. Don't be down!";
 		break;
-	default:
+	default :
 		echo "I'm neither happy nor sad, but $mood.";
 		break;
 }

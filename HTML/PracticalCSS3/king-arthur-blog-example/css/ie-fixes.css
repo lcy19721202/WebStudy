@@ -1,0 +1,66 @@
+body {
+	width: 1024px;
+	background: #3B6498 url(../images/clouds.png) top right no-repeat;
+}
+
+#tweets,#main {
+	padding-top: 0;
+}
+
+body>header {
+	position: static;
+	background-image: url("images/flag1.png");
+	width: 100%;
+	padding-top: 40px;
+	height: 250px;
+}
+
+hgroup h1,hgroup h2 {
+	position: static;
+}
+
+aside {
+	width: 30%;
+}
+
+figcaption {
+	display: none;
+}
+
+.footer {
+	clear: both;
+}
+
+#introduction p:first-of-type:first-letter,#main>article>p:first-of-type:first-letter
+	{
+	font-size: 200%;
+	float: none;
+	background-color: red;
+	margin: 2px;
+	padding: 2px;
+	color: #333;
+	border: none;
+}
+
+#main footer {
+	position: static;
+	height: auto;
+	z-index: auto;
+	background-color: rgb(236, 173, 83);
+	behavior: url(/cmills/arthur/script/PIE.htc);
+}
+
+#main footer:hover {
+	position: static;
+	height: auto;
+}
+
+#tweets article,aside article {
+	-pie-background: linear-gradient(45deg, #6988af, #a6b9cf);
+	background-color: rgb(255, 255, 255);
+	behavior: url(/cmills/arthur/script/PIE.htc);
+}
+
+aside article {
+	width: 100%;
+}

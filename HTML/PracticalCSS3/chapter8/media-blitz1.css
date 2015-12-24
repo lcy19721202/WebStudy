@@ -1,0 +1,45 @@
+/* || basic page layout */
+nav {
+	float: left;
+	width: 200px;
+	height: 500px;
+	background-color: green;
+	margin-left: 10px;
+}
+
+#main-panel {
+	margin-left: 220px;
+}
+
+#video-content {
+	float: left;
+	width: 60%;
+	background-color: blue;
+	height: 300px;
+}
+
+#related {
+	float: right;
+	width: 39%;
+	background-color: brown;
+	height: 300px;
+}
+
+footer {
+	clear: right;
+}
+
+header,footer {
+	background-color: yellow;
+	height: 100px;
+}
+
+/* */
+video {
+	width: 50%;
+	height: 50%;
+}
+
+h1,h2,p {
+	margin: 0;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Flexible Web Design, Chapter 9</title>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	display: -moz-inline-box; /* for FF 2 */
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+li a {
+	display: block; /* for FF 2 */
+}
+</style>
+<!--[if lte IE 7]>
+<style type="text/css">
+li {
+	display: inline;
+}
+</style>
+<![endif]-->
+</head>
+
+<body>
+	<h1>Seafood of the Month Club 2008</h1>
+	<ul>
+		<li><a href="#"><img src="january.jpg" alt="January"
+				width="100" height="100"></a></li>
+		<li><a href="#"><img src="february.jpg" alt="February"
+				width="100" height="120"></a></li>
+		<li><a href="#"><img src="march.jpg" alt="March" width="100"
+				height="100"></a></li>
+		<li><a href="#"><img src="april.jpg" alt="April" width="100"
+				height="110"></a></li>
+		<li><a href="#"><img src="may.jpg" alt="May" width="100"
+				height="130"></a></li>
+		<li><a href="#"><img src="june.jpg" alt="June" width="100"
+				height="110"></a></li>
+		<li><a href="#"><img src="july.jpg" alt="July" width="100"
+				height="100"></a></li>
+	</ul>
+</body>
+</html>

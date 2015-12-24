@@ -1,0 +1,367 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Beechwood Animal Shelter</title>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font: 88% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	line-height: 1.4;
+}
+
+#header {
+	display: table; /* for float containment */
+	width: 100%;
+	margin-bottom: 30px;
+	border-bottom: 6px solid #85A7E4;
+	background: #60240C url(images/bg-header.gif) repeat-x;
+}
+
+#header .buffer {
+	position: relative;
+	width: 41em;
+	margin: 0 auto;
+	padding-left: 180px;
+}
+
+#header img {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+
+#header form {
+	position: absolute;
+	top: 20px;
+	left: 190px;
+}
+
+#nav-skip {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+	font-size: 86%;
+}
+
+#nav-skip a {
+	color: #86B0E3;
+}
+
+#nav-main {
+	display: inline; /* IE 6 fix doubled float margin bug */
+	float: left;
+	margin: 79px 0 0 10px;
+	padding: 0;
+	list-style: none;
+}
+
+#nav-main li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background: url(images/nav-main-left.jpg) repeat-y;
+}
+
+#nav-main a {
+	display: block;
+	padding: .5em 10px;
+	background: url(images/nav-main-right.jpg) repeat-y right;
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#wrapper {
+	width: 41em;
+	margin: 0 auto;
+	padding-left: 180px;
+}
+
+#banner {
+	margin: 0 0 20px -180px;
+	padding: 2em 0 6em 20px;
+	background: #864316 url(images/banner.jpg) no-repeat 0 40%;
+	color: #fff;
+}
+
+#banner p {
+	width: 17em;
+	margin: 0;
+	font: 129% Cambria, "Palatino Linotype", Palatino, serif;
+	line-height: 1.4;
+}
+
+#banner a {
+	color: #fff;
+}
+
+#ads {
+	display: inline; /* IE 6 fix doubled float margin bug */
+	float: left;
+	width: 180px;
+	margin-left: -180px;
+}
+
+#ads img {
+	margin-bottom: 20px;
+}
+
+#story {
+	float: right;
+	width: 41em;
+	margin-bottom: 20px;
+}
+
+#story img {
+	float: left;
+}
+
+#story h2,#story p {
+	margin: 0 0 0 100px;
+}
+
+#adopt-pets {
+	float: right;
+	width: 41em;
+	background: #FAFAFC url(images/bg-adopt-pets.jpg) repeat-x;
+}
+
+#adopt-pets h2 {
+	float: right;
+	width: 105px;
+	height: 116px;
+	margin: -10px -40px 10px 10px;
+	background: url(images/adopt-header.png);
+	text-indent: -9999px;
+}
+
+#adopt-pets ul {
+	float: left;
+	width: 12em;
+	margin: 0;
+	padding: 1.5em;
+	list-style: none;
+	color: #60240C;
+}
+
+#adopt-pets li {
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+#adopt-pets ul h3 {
+	float: right;
+	width: 8.5em;
+	margin: 0;
+	font-size: 100%;
+}
+
+#adopt-pets ul p {
+	float: right;
+	width: 8.5em;
+	margin: 0;
+}
+
+#adopt-pets ul img {
+	float: left;
+	width: 3em;
+}
+
+#search-pets {
+	margin-left: 15em;
+	padding: 1.5em 1.5em 1.5em 0;
+}
+
+#search-pets fieldset {
+	margin: 0 0 .8em 0;
+	padding: .4em 0 0 0;
+	border: none;
+	border-top: 1px solid #ADC4ED;
+}
+
+#search-pets legend {
+	margin-left: -7px; /* for IE */
+	color: #000;
+	font-weight: bold;
+}
+
+#search-pets label {
+	margin-right: .5em;
+}
+
+#footer {
+	clear: both;
+	padding: 20px 0;
+}
+
+#footer p {
+	width: 90%;
+	min-width: 40em;
+	max-width: 75em;
+	margin: 0 auto;
+	font-size: 86%;
+}
+
+/* TEXT -------------------------------------- */
+p,h1,h2,h3,h4,h5,h6 {
+	margin-top: 0;
+}
+
+h1,h2 {
+	font-family: Cambria, "Palatino Linotype", Palatino, serif;
+}
+
+h1 {
+	margin-bottom: 0;
+	font-size: 200%;
+}
+
+h2 {
+	margin-bottom: .5em;
+	font-size: 136%;
+}
+
+/* LINKS -------------------------------------- */
+a {
+	color: #60240C;
+}
+</style>
+<!--[if IE 6]>
+<style>
+#nav-main {
+	margin-left: 7px;
+}
+#adopt-pets h2 {
+	position: relative;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/adopt-header.png", sizingMethod="crop");
+}
+</style>
+<![endif]-->
+</head>
+
+<body>
+	<div id="header">
+		<div class="buffer">
+			<ul id="nav-skip">
+				<li><a href="#wrapper">Skip to Main Content</a></li>
+			</ul>
+			<img src="images/logo.gif" alt="Beechwood Animal Shelter" width="170"
+				height="85">
+			<form>
+				<label for="search">Search:</label> <input type="text" name="search"
+					id="search"> <input type="submit" name="go" id="go"
+					value="go">
+			</form>
+			<ul id="nav-main">
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="/adopt-pet/">Adopt a Pet</a></li>
+				<li><a href="/get-involved/">Get Involved</a></li>
+				<li><a href="/programs/">Our Programs</a></li>
+				<li><a href="/news-events/">News and Events</a></li>
+				<li><a href="/about/">About the Shelter</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="banner">
+			<p>
+				Beechwood Animal Shelter is a no-kill animal rescue and adoption
+				center that works tirelessly to help rescued dogs and cats find
+				loving adoptive parents. Find out more <a href="/about/">about
+					us</a>, our <a href="/programs/">programs and services</a>, and <a
+					href="/get-involved/">how you can help</a>.
+			</p>
+		</div>
+		<div id="ads">
+			<img src="images/feature-fair.png" width="160" height="160"
+				alt="May 10, next adoption fair. Meet us."><img
+				src="images/feature-donate.png" width="160" height="160"
+				alt="You can help. Please donate today.">
+		</div>
+		<div id="story">
+			<img src="images/story.jpg" width="86" height="86" alt="">
+			<h2>Another happy ending</h2>
+			<p>&quot;We adopted Bailey earlier this spring. Bailey is doing
+				great and loves to play in the yard with our other two dogs.
+				Everyone she meets wants to take her home. She’s very well behaved,
+				great around children of all ages and loves giving doggie
+				kisses.&quot;</p>
+		</div>
+		<div id="adopt-pets">
+			<h2>Adopt me!</h2>
+			<ul>
+				<li>
+					<h3>Styx</h3> <img src="images/adopt1.jpg" alt="">
+					<p>Shorthair, black</p>
+					<p>Male, 2 years</p>
+				</li>
+				<li>
+					<h3>Shelby</h3> <img src="images/adopt2.jpg" alt="">
+					<p>Yellow lab mix</p>
+					<p>Female, 6 years</p>
+				</li>
+				<li>
+					<h3>Picasso</h3> <img src="images/adopt3.jpg" alt="">
+					<p>Shorthair, orange tabby</p>
+					<p>Male, 10 months</p>
+				</li>
+				<li>
+					<h3>Alley</h3> <img src="images/adopt4.jpg" alt="">
+					<p>Longhair, gray</p>
+					<p>Male, 5 years</p>
+				</li>
+			</ul>
+			<div id="search-pets">
+				<p>These are just a few of the hundreds of dogs and cats we have
+					available for adoption right now. You can use the form below to
+					find your perfect pet. Please also consider fostering a pet until
+					it can find a permanent home.</p>
+				<form>
+					<fieldset>
+						<legend>Type:</legend>
+						<input type="radio" name="type" value="type-dog" id="type-dog">
+						<label for="type-dog">Dog</label> <input type="radio" name="type"
+							value="type-cat" id="type-cat"> <label for="type-cat">Cat</label>
+					</fieldset>
+					<fieldset>
+						<legend>Breed Type:</legend>
+						<input type="radio" name="breed-type" value="breed-type-any"
+							id="breed-type-any"> <labelfor-"breed-type-any">Any</label>
+						<input type="radio" name="breed-type" value="breed-type-purebred" id="breed-type-purebred">
+						<label for-"breed-type-purebred">Purebred</label>
+						<input type="radio" name="breed-type" value="breed-type-mixed" id="breed-type-mixed">
+						<label for-"breed-type-mixed">Mixed Breed</label>
+				</fieldset>
+					<fieldset>
+						<legend>Sex:</legend>
+						<input type="radio" name="sex" value="sex-any" id="sex-any">
+						<label for="sex-any">Any</label> <input type="radio" name="sex"
+							value="sex-male" id="sex-male"> <label for="sex-male">Male</label>
+						<input type="radio" name="sex" value="sex-female" id="sex-female">
+						<label for="sex-female">Female</label>
+					</fieldset>
+					<fieldset>
+						<legend>Length of Care:</legend>
+						<input type="radio" name="length-care" value="length-care-adopt"
+							id="length-care-adopt"> <label for="length-care-adopt">Adopt</label>
+						<input type="radio" name="length-care" value="length-care-foster"
+							id="length-care-foster"> <label for="length-care-foster">Foster</label>
+					</fieldset>
+					<input type="submit" name="search" id="search" value="search">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>&copy; 2008 Beechwood Animal Shelter</p>
+	</div>
+</body>
+</html>

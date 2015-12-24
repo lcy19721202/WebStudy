@@ -1,4 +1,4 @@
 <?php
 $addResult = include 'returnvalue.php';
-echo "The include file returned ".$addResult;
+echo "The include file returned " . $addResult;
 ?>

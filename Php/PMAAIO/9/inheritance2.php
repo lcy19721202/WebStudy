@@ -5,7 +5,7 @@ class myClass {
 		$this->name = $n;
 	}
 	function sayHello() {
-		echo "HELLO! My name is ".$this->name;
+		echo "HELLO! My name is " . $this->name;
 	}
 }
 class childClass extends myClass {
@@ -13,6 +13,6 @@ class childClass extends myClass {
 		echo "I will not tell you my name.";
 	}
 }
-$object1 = new childClass("Baby Matt");
-$object1 -> sayHello();
+$object1 = new childClass ( "Baby Matt" );
+$object1->sayHello ();
 ?>

@@ -1,0 +1,13 @@
+#ad div {
+	width: 720px;
+	height: 300px;
+}
+
+#ad #frame1 ul {
+	bottom: 50px;
+	right: 60px;
+}
+
+#ad h2 {
+	top: 10px;
+}

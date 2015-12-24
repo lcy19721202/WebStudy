@@ -1,7 +1,6 @@
 <?php
-function test()
-{
-	 $testvariable = "this is a test variable";
+function test() {
+	$testvariable = "this is a test variable";
 }
-echo "test variable: ".$testvariable."<br/>";
+echo "test variable: " . $testvariable . "<br/>";
 ?>

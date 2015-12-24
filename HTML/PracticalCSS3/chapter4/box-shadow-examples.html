@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Box shadow examples</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link
+	href='http://fonts.googleapis.com/css?family=Chelsea+Market|Montaga'
+	rel='stylesheet' type='text/css'>
+
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: #7109AA;
+}
+
+h1 {
+	font-family: 'Chelsea Market', cursive;
+	font-size: 40px;
+	font-size: 4rem;
+	text-transform: uppercase;
+	color: #AD66D5;
+}
+
+h2 {
+	font-family: 'Montaga', serif;
+	font-size: 28px;
+	font-size: 2.8rem;
+	color: #AD66D5;
+}
+
+p {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+article,h1 {
+	padding: 0 0 40px 40px;
+	padding: 0 0 4rem 4rem;
+}
+
+div {
+	background-color: white;
+	float: left;
+	width: 100px;
+	width: 10rem;
+	height: 80px;
+	height: 8rem;
+	margin-right: 40px;
+	margin-right: 4rem;
+	text-align: center;
+	border: 2px solid #AD66D5;
+	behavior: url(PIE.htc);
+}
+
+p {
+	padding: 30px 0 30px 0;
+	padding: 3rem 0 3rem 0;
+	vertical-align: center;
+	margin: 0 0 0 14.5rem;
+}
+
+#box1 {
+	box-shadow: 2px 2px 1px black;
+}
+
+#box2 {
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px black;
+}
+
+#box3 {
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px black;
+}
+
+#box4 {
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#box5 {
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px
+		rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2);
+}
+
+#box6 {
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), inset 5px 5px 8px
+		rgba(0, 0, 0, 0.5);
+}
+
+#box7 {
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<h1>Box shadow examples</h1>
+
+	<article>
+		<div id="box1">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>box-shadow: 2px 2px 1px black;</code>
+		</p>
+	</article>
+
+	<article>
+		<div id="box2">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>
+				border-radius: 10px;<br> box-shadow: 2px 2px 1px black;
+			</code>
+		</p>
+	</article>
+
+	<article>
+		<div id="box3">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>
+				border-radius: 10px;<br> box-shadow: 5px 5px 10px black;
+			</code>
+		</p>
+	</article>
+
+	<article>
+		<div id="box4">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>
+				border-radius: 10px;<br> box-shadow: 5px 5px 10px
+				rgba(0,0,0,0.5);
+			</code>
+		</p>
+	</article>
+
+	<article>
+		<div id="box5">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>
+				border-radius: 10px;<br> box-shadow: 2px 2px 5px
+				rgba(0,0,0,0.5),<br> 10px 10px 15px rgba(0,0,0,0.5),<br>
+				-1px -1px 30px rgba(0,0,0,0.2);
+			</code>
+		</p>
+	</article>
+
+	<article>
+		<div id="box6">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>
+				border-radius: 10px;<br> box-shadow: 2px 2px 5px
+				rgba(0,0,0,0.5),<br> inset 5px 5px 8px rgba(0,0,0,0.5);
+			</code>
+		</p>
+	</article>
+
+	<article>
+		<div id="box7">
+			<h2>Bling!</h2>
+		</div>
+
+		<p>
+			<code>
+				border-radius: 10px;<br> box-shadow: 5px 5px 10px 10px
+				rgba(0,0,0,0.5);
+			</code>
+		</p>
+	</article>
+
+</body>
+</html>

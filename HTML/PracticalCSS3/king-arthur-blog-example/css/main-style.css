@@ -1,0 +1,551 @@
+/* || web font imports */
+@font-face {
+	font-family: 'UglyQuaRegular';
+	src: url('../fonts/uglyqua-webfont.eot');
+	src: url('../fonts/uglyqua-webfont.eot?#iefix'),
+		url('../fonts/uglyqua-webfont.woff'),
+		url('../fonts/uglyqua-webfont.ttf'),
+		url('../fonts/uglyqua-webfont.svg#UglyQuaRegular');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'KellsSDRegular';
+	src: url('../fonts/kells_sd-webfont.eot');
+	src: url('../fonts/kells_sd-webfont.eot?#iefix')
+		format('embedded-opentype'), url('../fonts/kells_sd-webfont.woff')
+		format('woff'), url('../fonts/kells_sd-webfont.ttf')
+		format('truetype'),
+		url('../fonts/kells_sd-webfont.svg#KellsSDRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GenzschEtHeyseRegular';
+	src: url('../fonts/genzschetheyse-webfont.eot');
+	src: url('../fonts/genzschetheyse-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('../fonts/genzschetheyse-webfont.woff') format('woff'),
+		url('../fonts/genzschetheyse-webfont.ttf') format('truetype'),
+		url('../fonts/genzschetheyse-webfont.svg#GenzschEtHeyseRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* || General sizing */
+html {
+	font-size: 62.5%;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-o-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+body {
+	font-size: 15px;
+	font-size: 1.4rem;
+	font-family: UglyQuaRegular, sans-serif;
+}
+
+h1 {
+	font-size: 60px;
+	font-size: 6rem;
+	font-family: GenzschEtHeyseRegular, sans-serif;
+}
+
+h2 {
+	font-size: 30px;
+	font-size: 3rem;
+	font-family: KellsSDRegular, sans-serif;
+}
+
+h3 {
+	font-size: 20px;
+	font-size: 2rem;
+	font-family: KellsSDRegular, sans-serif;
+	padding-bottom: 5px;
+	padding-bottom: 0.5rem;
+}
+
+/* || General layout */
+body {
+	background: url(../images/castle.png) top left no-repeat,
+		url(../images/clouds.png) top right no-repeat,
+		-webkit-linear-gradient(top right, #3B6498, #C1CDDB);
+	background: url(../images/castle.png) top left no-repeat,
+		url(../images/clouds.png) top right no-repeat,
+		-moz-linear-gradient(top right, #3B6498, #C1CDDB);
+	background: url(../images/castle.png) top left no-repeat,
+		url(../images/clouds.png) top right no-repeat,
+		-ms-linear-gradient(top right, #3B6498, #C1CDDB);
+	background: url(../images/castle.png) top left no-repeat,
+		url(../images/clouds.png) top right no-repeat,
+		-o-linear-gradient(top right, #3B6498, #C1CDDB);
+	background: url(../images/castle.png) top left no-repeat,
+		url(../images/clouds.png) top right no-repeat,
+		linear-gradient(top right, #3B6498, #C1CDDB);
+	background-color: #C1CDDB;
+	behavior: url(script/PIE.htc);
+}
+
+body>header {
+	position: absolute;
+}
+
+body>footer {
+	clear: both;
+	zoom: 1;
+}
+
+#main {
+	width: 60%;
+	float: right;
+	clear: right;
+	margin: 20px 0 0 0;
+	margin: 2rem 0 0 0;
+	padding-top: 250px;
+	padding-top: 25rem;
+	padding-bottom: 100px;
+	padding-bottom: 10rem;
+}
+
+#tweets {
+	width: 40%;
+	float: left;
+	padding-top: 297px;
+	padding-top: 29.7rem;
+}
+
+aside {
+	width: 36%;
+	float: left;
+	margin-bottom: 150px;
+	margin-bottom: 15em;
+}
+
+p {
+	padding: 0 0 10px 0;
+	padding: 0 0 1em 0;
+}
+
+li {
+	padding: 2px 0 2px 0;
+	padding: 0.2rem 0 0.2rem 0;
+}
+
+ul {
+	padding-left: 15px;
+	padding-left: 1.5rem;
+}
+
+/* || styling main content */
+#main article {
+	padding: 20px 20px 100px 20px;
+	padding: 2rem 2rem 10rem 2rem;
+	margin: 0 30px 30px 30px;
+	margin: 0 3rem 3rem 3rem;
+	border-width: 12px 10px 12px 10px;
+	-webkit-border-image: url(../images/parchment.png) 12 10 12 10 round
+		round;
+	-moz-border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	-ms-border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	-o-border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	position: relative;
+	background: url(../images/parchment-bg.jpg);
+	background-clip: padding-box;
+	behavior: url(script/PIE.htc);
+}
+
+#main img {
+	float: right;
+	margin-left: 10px;
+	margin-left: 1em;
+	opacity: 0.4;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-ms-transition: 1s all;
+	-o-transition: 1s all;
+	transition: 1s all;
+}
+
+#main img:hover {
+	opacity: 1;
+}
+
+#main footer p:first-child {
+	text-transform: uppercase;
+}
+
+#main footer p:nth-of-type(2):after {
+	content: " (+)";
+}
+
+#main footer {
+	position: absolute;
+	height: 70px;
+	height: 7rem;
+	overflow: hidden;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	z-index: 2;
+	background-color: rgba(236, 173, 83, 0);
+	border: 1px solid rgba(236, 173, 83, 0);
+	padding: 0 10px 0 10px;
+	padding: 0rem 1rem 0rem 1rem;
+	margin-right: 20px;
+	margin-right: 2rem;
+	behavior: url(script/PIE.htc);
+}
+
+#main footer:hover {
+	position: absolute;
+	height: 280px;
+	height: 28rem;
+	overflow: hidden;
+	background-color: rgba(236, 173, 83, 1);
+	border-color: rgba(191, 144, 77, 1);
+	padding-bottom: 10px;
+	padding-bottom: 1rem;
+	behavior: url(script/PIE.htc);
+}
+
+/* || styling twitter feed box */
+#tweets img {
+	border: 1px solid black;
+	float: left;
+	margin: 5px 10px 0 0;
+	margin: 0.5rem 1rem 0 0;
+}
+
+#tweets article {
+	clear: left;
+	padding: 10px 10px 0 10px;
+	padding: 1rem 1rem 0 1rem;
+	margin: 0 0 20px 20px;
+	margin: 0 0 2rem 2rem;
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid black;
+	border-radius: 4px;
+	box-shadow: 2px 2px 10px black;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
+	behavior: url(script/PIE.htc);
+}
+
+#tweets article:hover {
+	box-shadow: 5px 5px 10px black;
+	behavior: url(script/PIE.htc);
+}
+
+#tweets h2 {
+	color: black;
+	text-shadow: 1px 1px 1px white;
+	margin-left: 30px;
+	margin-left: 3rem;
+	behavior: url(script/PIE.htc);
+}
+
+#tweets p {
+	text-align: center;
+}
+
+#tweets article p:first-of-type {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#tweets article p:last-of-type {
+	font-style: italic;
+}
+
+/* || styling aside "knights" box */
+aside {
+	padding: 10px 0 0 0;
+	padding: 1rem 0 0 0;
+}
+
+aside article {
+	width: 30%;
+	float: left;
+	padding: 20px;
+	padding: 2rem;
+	margin: 20px;
+	margin: 2rem;
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 1px solid black;
+	border-radius: 4px;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
+	position: relative;
+	box-shadow: 2px 2px 10px black;
+	behavior: url(script/PIE.htc);
+}
+
+aside article:hover {
+	box-shadow: 5px 5px 10px black;
+	behavior: url(script/PIE.htc);
+}
+
+aside h3 {
+	position: absolute;
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	height: 30px;
+	height: 3rem;
+	opacity: 0;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-ms-transition: 1s all;
+	-o-transition: 1s all;
+	transition: 1s all;
+	behavior: url(script/PIE.htc);
+}
+
+aside h3:hover {
+	opacity: 1;
+}
+
+aside h2 {
+	margin-left: 30px;
+	margin-left: 3rem;
+	color: black;
+	text-shadow: 1px 1px 1px white;
+	behavior: url(script/PIE.htc);
+}
+
+aside img {
+	border: 1px solid black;
+}
+
+/* || styling header */
+body>header {
+	width: 90%;
+	height: 200px;
+	height: 20rem;
+	background: url(../images/flag1.png) 0px 5px no-repeat;
+	top: 20px;
+	top: 2rem;
+	left: 10px;
+	left: 1rem;
+	-webkit-transform: skew(4deg, 6deg);
+	-moz-transform: skew(4deg, 6deg);
+	-ms-transform: skew(4deg, 6deg);
+	-o-transform: skew(4deg, 6deg);
+	transform: skew(4deg, 6deg);
+}
+
+h1 {
+	position: relative;
+	color: #a60000;
+	text-shadow: 1px 1px 1px black;
+	left: 30px;
+	left: 3rem;
+	behavior: url(script/PIE.htc);
+}
+
+body>header h2 {
+	position: relative;
+	bottom: 70px;
+	bottom: 7rem;
+	left: 40px;
+	left: 4rem;
+	color: #ccc;
+}
+
+header>hgroup {
+	position: relative;
+	bottom: 40px;
+	bottom: 4rem;
+}
+
+/* || styling links */
+a:link,a:visited {
+	color: #A60000;
+	background-color: rgba(0, 0, 0, 0);
+	-webkit-transition: 0.7s all;
+	-moz-transition: 0.7s all;
+	-ms-transition: 0.7s all;
+	-o-transition: 0.7s all;
+	transition: 0.7s all;
+	padding: 0 2px 0 2px;
+	padding: 0 0.2rem 0 0.2rem;
+	border-radius: 3px;
+	border: 1px solid rgba(0, 0, 0, 0);
+	box-decoration-break: clone;
+	behavior: url(script/PIE.htc);
+}
+
+a:focus,a:hover {
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	behavior: url(script/PIE.htc);
+}
+
+/* || styling navigation */
+nav {
+	position: absolute;
+	top: 120px;
+	top: 12rem;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline;
+}
+
+nav li a {
+	display: inline-block;
+	padding-right: 10px;
+	padding-right: 1rem;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+nav a:link,nav a:visited {
+	text-decoration: none;
+	color: rgb(236, 173, 83);
+	background: -webkit-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25)
+		1px, rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0)
+		4px, rgba(0, 0, 0, 0) 5px),
+		-webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 3px, rgba(0, 0, 0, 0.1) 4px, rgba(0, 0, 0, 0) 6px,
+		rgba(0, 0, 0, 0) 7px), -webkit-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0));
+	background: -moz-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25)
+		1px, rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0)
+		4px, rgba(0, 0, 0, 0) 5px),
+		-moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 3px, rgba(0, 0, 0, 0.1) 4px, rgba(0, 0, 0, 0) 6px,
+		rgba(0, 0, 0, 0) 7px), -moz-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0));
+	background: -ms-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0) 4px,
+		rgba(0, 0, 0, 0) 5px),
+		-ms-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 3px, rgba(0, 0, 0, 0.1) 4px, rgba(0, 0, 0, 0) 6px,
+		rgba(0, 0, 0, 0) 7px), -ms-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0));
+	background: -o-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0) 4px,
+		rgba(0, 0, 0, 0) 5px),
+		-o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 3px, rgba(0, 0, 0, 0.1) 4px, rgba(0, 0, 0, 0) 6px,
+		rgba(0, 0, 0, 0) 7px), -o-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0));
+	background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0) 4px,
+		rgba(0, 0, 0, 0) 5px),
+		repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 3px, rgba(0, 0, 0, 0.1) 4px, rgba(0, 0, 0, 0) 6px,
+		rgba(0, 0, 0, 0) 7px), linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0));
+	-pie-background: linear-gradient(top, #ccc, #333);
+	background-color: rgba(70, 70, 70, 1);
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
+	padding: 2px 6px 2px 6px;
+	padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+	border-radius: 3px;
+	border-radius: 0.3rem;
+	border: 1px dashed rgba(255, 255, 255, 0.2);
+	box-shadow: 1px 1px 1px black;
+	behavior: url(script/PIE.htc);
+}
+
+nav a:focus,nav a:hover {
+	box-shadow: inset 2px 2px 2px black;
+}
+
+nav a:active {
+	box-shadow: inset 4px 4px 4px black;
+	color: rgb(161, 114, 47);
+}
+
+/* || styling footer */
+body>footer {
+	height: 108px;
+	height: 10.8rem;
+	background: url(../images/grass.png) bottom repeat-x;
+	position: relative;
+}
+
+body>footer p {
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	padding: 10px 0 10px 0;
+	padding: 1rem 0 1rem 0;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	border-width: 12px 10px 12px 10px;
+	-webkit-border-image: url(../images/parchment.png) 12 10 12 10 round
+		round;
+	-moz-border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	-ms-border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	-o-border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	border-image: url(../images/parchment.png) 12 10 12 10 round round;
+	background: url(../images/parchment-bg.jpg);
+	background-clip: padding-box;
+}
+
+/* || typography */
+#main>article,body>footer {
+	line-height: 25px;
+	line-height: 2.5rem;
+	word-spacing: 4px;
+	word-spacing: 0.4rem;
+}
+
+#main>article>p:first-of-type:first-line {
+	font-variant: small-caps;
+}
+
+#main>article>p:first-of-type:first-letter {
+	font-size: 400%;
+	float: left;
+	background: -webkit-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25)
+		1px, rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0)
+		4px, rgba(0, 0, 0, 0) 5px);
+	background: -moz-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25)
+		1px, rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0)
+		4px, rgba(0, 0, 0, 0) 5px);
+	background: -ms-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0) 4px,
+		rgba(0, 0, 0, 0) 5px);
+	background: -o-repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0) 4px,
+		rgba(0, 0, 0, 0) 5px);
+	background: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 1px,
+		rgba(0, 0, 0, 0.25) 2px, rgba(0, 0, 0, 0.1) 3px, rgba(0, 0, 0, 0) 4px,
+		rgba(0, 0, 0, 0) 5px);
+	background-color: red;
+	margin: 2% 1% 0 0;
+	padding: 3% 1%;
+	text-shadow: -1px -1px 2px black;
+	color: #333;
+	border-right: 1px solid rgba(0, 0, 0, 1);
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
+	behavior: url(script/PIE.htc);
+}

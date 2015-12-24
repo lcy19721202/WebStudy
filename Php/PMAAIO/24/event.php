@@ -2,57 +2,58 @@
 <html>
 <head>
 <title>Show/Add Events</title>
+
+
 <body>
-<h1>Show/Add Events</h1>
+	<h1>Show/Add Events</h1>
 <?php
-$mysqli = mysqli_connect("localhost", "joeuser", "somepass", "testDB");
+$mysqli = mysqli_connect ( "localhost", "joeuser", "somepass", "testDB" );
 
-//add any new event
+// add any new event
 if ($_POST) {
-
-	//create database-safe strings
-	$safe_m = mysqli_real_escape_string($mysqli, $_POST['m']);
-	$safe_d = mysqli_real_escape_string($mysqli, $_POST['d']);
-	$safe_y = mysqli_real_escape_string($mysqli, $_POST['y']);
-	$safe_event_title = mysqli_real_escape_string($mysqli, $_POST['event_title']);
-	$safe_event_shortdesc = mysqli_real_escape_string($mysqli, $_POST['event_shortdesc']);
-	$safe_event_time_hh = mysqli_real_escape_string($mysqli, $_POST['event_time_hh']);
-	$safe_event_time_mm = mysqli_real_escape_string($mysqli, $_POST['event_time_mm']);
-
-	$event_date = $safe_y."-".$safe_m."-".$safe_d." ".$safe_event_time_hh.":".$safe_event_time_mm.":00";
-
-	$insEvent_sql = "INSERT INTO calendar_events (event_title, event_shortdesc, event_start) VALUES('".$safe_event_title."', '".$safe_event_shortdesc."', '".$event_date."')";
-	$insEvent_res = mysqli_query($mysqli, $insEvent_sql) or die(mysqli_error($mysqli));
-
+	
+	// create database-safe strings
+	$safe_m = mysqli_real_escape_string ( $mysqli, $_POST ['m'] );
+	$safe_d = mysqli_real_escape_string ( $mysqli, $_POST ['d'] );
+	$safe_y = mysqli_real_escape_string ( $mysqli, $_POST ['y'] );
+	$safe_event_title = mysqli_real_escape_string ( $mysqli, $_POST ['event_title'] );
+	$safe_event_shortdesc = mysqli_real_escape_string ( $mysqli, $_POST ['event_shortdesc'] );
+	$safe_event_time_hh = mysqli_real_escape_string ( $mysqli, $_POST ['event_time_hh'] );
+	$safe_event_time_mm = mysqli_real_escape_string ( $mysqli, $_POST ['event_time_mm'] );
+	
+	$event_date = $safe_y . "-" . $safe_m . "-" . $safe_d . " " . $safe_event_time_hh . ":" . $safe_event_time_mm . ":00";
+	
+	$insEvent_sql = "INSERT INTO calendar_events (event_title, event_shortdesc, event_start) VALUES('" . $safe_event_title . "', '" . $safe_event_shortdesc . "', '" . $event_date . "')";
+	$insEvent_res = mysqli_query ( $mysqli, $insEvent_sql ) or die ( mysqli_error ( $mysqli ) );
 } else {
-
-	//create database-safe strings
-	$safe_m = mysqli_real_escape_string($mysqli, $_GET['m']);
-	$safe_d = mysqli_real_escape_string($mysqli, $_GET['d']);
-	$safe_y = mysqli_real_escape_string($mysqli, $_GET['y']);
+	
+	// create database-safe strings
+	$safe_m = mysqli_real_escape_string ( $mysqli, $_GET ['m'] );
+	$safe_d = mysqli_real_escape_string ( $mysqli, $_GET ['d'] );
+	$safe_y = mysqli_real_escape_string ( $mysqli, $_GET ['y'] );
 }
 
-//show events for this day
-$getEvent_sql = "SELECT event_title, event_shortdesc, date_format(event_start, '%l:%i %p') as fmt_date FROM calendar_events WHERE month(event_start) = '".$safe_m."' AND dayofmonth(event_start) = '".$safe_d."' AND year(event_start) = '".$safe_y."' ORDER BY event_start";
-$getEvent_res = mysqli_query($mysqli, $getEvent_sql) or die(mysqli_error($mysqli));
+// show events for this day
+$getEvent_sql = "SELECT event_title, event_shortdesc, date_format(event_start, '%l:%i %p') as fmt_date FROM calendar_events WHERE month(event_start) = '" . $safe_m . "' AND dayofmonth(event_start) = '" . $safe_d . "' AND year(event_start) = '" . $safe_y . "' ORDER BY event_start";
+$getEvent_res = mysqli_query ( $mysqli, $getEvent_sql ) or die ( mysqli_error ( $mysqli ) );
 
-if (mysqli_num_rows($getEvent_res) > 0) {
+if (mysqli_num_rows ( $getEvent_res ) > 0) {
 	$event_txt = "<ul>";
-	while ($ev = @mysqli_fetch_array($getEvent_res)) {
-		$event_title = stripslashes($ev['event_title']);
-		$event_shortdesc = stripslashes($ev['event_shortdesc']);
-		$fmt_date = $ev['fmt_date'];
-
-		$event_txt .= "<li><strong>".$fmt_date."</strong>: ".$event_title."<br/>".$event_shortdesc."</li>";
+	while ( $ev = @mysqli_fetch_array ( $getEvent_res ) ) {
+		$event_title = stripslashes ( $ev ['event_title'] );
+		$event_shortdesc = stripslashes ( $ev ['event_shortdesc'] );
+		$fmt_date = $ev ['fmt_date'];
+		
+		$event_txt .= "<li><strong>" . $fmt_date . "</strong>: " . $event_title . "<br/>" . $event_shortdesc . "</li>";
 	}
 	$event_txt .= "</ul>";
-	mysqli_free_result($getEvent_res);
+	mysqli_free_result ( $getEvent_res );
 } else {
 	$event_txt = "";
 }
 
 // close connection to MySQL
-mysqli_close($mysqli);
+mysqli_close ( $mysqli );
 
 if ($event_txt != "") {
 	echo "<p><strong>Today's Events:</strong></p>
@@ -77,7 +78,7 @@ Complete the form below and press the submit button to add the event and refresh
 <select name="event_time_hh">
 END_OF_TEXT;
 
-for ($x=1; $x <= 24; $x++) {
+for($x = 1; $x <= 24; $x ++) {
 	echo "<option value=\"$x\">$x</option>";
 }
 

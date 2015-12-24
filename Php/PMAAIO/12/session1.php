@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start ();
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,16 +7,18 @@ session_start();
 <title>Accessing session variables</title>
 </head>
 <body>
-<h1>Content Page</h1>
+	<h1>Content Page</h1>
 <?php
-if (isset($_SESSION['products'])) {
+if (isset ( $_SESSION ['products'] )) {
 	echo "<strong>Your cart:</strong><ol>";
-	foreach (unserialize($_SESSION['products']) as $p) {
-		echo "<li>".$p."</li>";
+	foreach ( unserialize ( $_SESSION ['products'] ) as $p ) {
+		echo "<li>" . $p . "</li>";
 	}
 	echo "</ol>";
 }
 ?>
-<p><a href="arraysession.php">return to product choice page</a></p>
+<p>
+		<a href="arraysession.php">return to product choice page</a>
+	</p>
 </body>
 </html>

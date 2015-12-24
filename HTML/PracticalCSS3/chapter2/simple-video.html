@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Simple video example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+video {
+	border: 1px solid black;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<video controls poster="images/ship-icon.png" width="640" height="360">
+		<source src="video/boatride.mp4" type="video/mp4">
+    <source src="video/boatride.webm" type="video/webm">
+    <!-- fallback content here -->
+  
+	</video>
+
+	<p>
+		<a href="http://thenounproject.com/noun/ship/#icon-No619">Ship
+			icon</a> by The Noun Project, from <a href="http://thenounproject.com/">The
+			Noun Project collection</a>.
+	</p>
+
+</body>
+</html>

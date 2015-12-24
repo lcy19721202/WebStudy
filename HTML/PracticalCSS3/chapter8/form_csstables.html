@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML forms examples</title>
+<style>
+li {
+	list-style-type: none;
+	display: table-row;
+	height: 3em;
+}
+
+label {
+	display: table-cell;
+	width: 17em;
+	padding-right: 1em;
+	text-align: right;
+}
+
+fieldset {
+	width: 40em;
+}
+
+li li {
+	text-align: right;
+}
+
+label[for="sex"]+ul {
+	margin-left: 1em;
+}
+
+fieldset#choices>ul>li:nth-of-type(2) {
+	height: 7em;
+}
+
+fieldset#choices>ul>li:nth-of-type(2)>label {
+	vertical-align: top;
+}
+</style>
+</head>
+<body>
+	<h1>HTML form example</h1>
+
+	<form id="details-form" action="validator.php" method="post">
+		<fieldset id="personal">
+			<legend>Personal details</legend>
+			<ul>
+				<li><label for="name">Enter your name (first name, last
+						name):</label> <input type="text" name="name" id="name"></li>
+				<li><label for="age">Enter your age:</label> <input type="text"
+					name="age" id="age"></li>
+				<li><label for="post">Enter your postcode:</label> <input
+					type="text" name="post" id="post"></li>
+				<li><label for="sex">What sex are you?</label>
+					<ul>
+						<li>Male: <input type="radio" name="sex" id="male"
+							value="male" /></li>
+						<li>Female: <input type="radio" name="sex" id="female"
+							value="female" /></li>
+						<li>Other: <input type="radio" name="sex" id="other"
+							value="other" /></li>
+					</ul></li>
+			</ul>
+		</fieldset>
+		<fieldset id="choices">
+			<legend>Make your choices!</legend>
+			<ul>
+				<li><label for="vehicle">Choose which way you'd like to
+						fly:</label>
+					<ul>
+						<li>Helicopter <input type="checkbox" name="vehicle"
+							id="helicopter" value="Helicopter" checked="checked" /></li>
+						<li>Aeroplane <input type="checkbox" name="vehicle"
+							id="aeroplane" value="Aeroplane" /></li>
+					</ul></li>
+				<li><label for="feedback">Please provide your feedback:</label>
+					<textarea rows="5" cols="30" name="feedback" id="feedback">
+The cat was playing in the garden.
+      </textarea></li>
+				<li><label for="icecream">Tell me what your favourite
+						ice cream flavour is:</label> <select name="icecream" id="icecream">
+						<option value="">Click to select option</option>
+						<optgroup label="Nice flavours">
+							<option value="vanilla">Vanilla</option>
+							<option value="strawberry">Strawberry</option>
+							<option value="chocolate">Chocolate</option>
+							<option value="mint">Mint</option>
+						</optgroup>
+						<optgroup label="Nasty flavours">
+							<option value="mustard">Mustard</option>
+							<option value="sauerkraut">Sauerkraut</option>
+							<option value="earwax">Ear Wax</option>
+							<option value="marmite">Marmite</option>
+						</optgroup>
+				</select></li>
+			</ul>
+		</fieldset>
+		<input type="submit" name="submit" id="submit" value="Submit form!">
+	</form>
+
+</body>
+</html>

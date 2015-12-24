@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Simple audio example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+audio {
+	border: 1px solid black;
+	margin: 5rem auto;
+}
+
+p {
+	padding-left: 3rem;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<audio controls>
+		<source src="audio/heavymetal.mp3" type="audio/mp3">
+    <source src="audio/heavymetal.ogg" type="audio/ogg">
+    <!-- fallback content here -->  
+  
+	</audio>
+
+	<p>
+		Song: <q>Man of the Dragon</q> by <a
+			href="http://www.conquestofsteel.co.uk">Conquest of Steel</a>
+	</p>
+
+</body>
+</html>

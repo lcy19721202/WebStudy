@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Gradients and background size</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Acme', sans-serif;
+	margin: 0;
+}
+
+article {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	min-width: 700px;
+	min-height: 500px;
+}
+
+.grad1 {
+	background: -webkit-radial-gradient(transparent 10px, #A60000 11px, #A60000 12px),
+		-webkit-repeating-linear-gradient(transparent 0px, transparent 20px,
+		rgba(255, 0, 0, 1) 21px, rgba(255, 0, 0, 1) 21px) 0 -10px,
+		-webkit-repeating-linear-gradient(left, transparent 0px, rgba(255, 0, 0,
+		1) 19px, transparent 21px) 12px 0;
+	background: -moz-radial-gradient(transparent 10px, #A60000 11px, #A60000 12px),
+		-moz-repeating-linear-gradient(transparent 0px, transparent 20px, rgba(255
+		, 0, 0, 1) 21px, rgba(255, 0, 0, 1) 21px) 0 -10px,
+		-moz-repeating-linear-gradient(left, transparent 0px, rgba(255, 0, 0, 1)
+		19px, transparent 21px) 12px 0;
+	background: -ms-radial-gradient(transparent 10px, #A60000 11px, #A60000 12px),
+		-ms-repeating-linear-gradient(transparent 0px, transparent 20px, rgba(255
+		, 0, 0, 1) 21px, rgba(255, 0, 0, 1) 21px) 0 -10px,
+		-ms-repeating-linear-gradient(left, transparent 0px, rgba(255, 0, 0, 1)
+		19px, transparent 21px) 12px 0;
+	background: -o-radial-gradient(transparent 10px, #A60000 11px, #A60000 12px),
+		-o-repeating-linear-gradient(transparent 0px, transparent 20px, rgba(255
+		, 0, 0, 1) 21px, rgba(255, 0, 0, 1) 21px) 0 -10px,
+		-o-repeating-linear-gradient(left, transparent 0px, rgba(255, 0, 0, 1)
+		19px, transparent 21px) 12px 0;
+	background: radial-gradient(transparent 10px, #A60000 11px, #A60000 12px),
+		repeating-linear-gradient(transparent 0px, transparent 20px, rgba(255, 0
+		, 0, 1) 21px, rgba(255, 0, 0, 1) 21px) 0 -10px,
+		repeating-linear-gradient(left, transparent 0px, rgba(255, 0, 0, 1)
+		19px, transparent 21px) 12px 0;
+	background-size: 21px 21px, 100%;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<article class="grad1"></article>
+
+
+</body>
+</html>

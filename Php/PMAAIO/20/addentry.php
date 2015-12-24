@@ -1,8 +1,8 @@
 <?php
 include 'ch20_include.php';
 
-if (!$_POST) {
-	//haven't seen the form, so show it
+if (! $_POST) {
+	// haven't seen the form, so show it
 	$display_block = <<<END_OF_TEXT
 	<form method="post" action="$_SERVER[PHP_SELF]">
 
@@ -71,77 +71,76 @@ if (!$_POST) {
 	<button type="submit" name="submit" value="send">Add Entry</button>
 	</form>
 END_OF_TEXT;
-
 } else if ($_POST) {
-	//time to add to tables, so check for required fields
-	if (($_POST['f_name'] == "") || ($_POST['l_name'] == "")) {
-		header("Location: addentry.php");
-		exit;
+	// time to add to tables, so check for required fields
+	if (($_POST ['f_name'] == "") || ($_POST ['l_name'] == "")) {
+		header ( "Location: addentry.php" );
+		exit ();
 	}
-
-	//connect to database
-	doDB();
-
-	//create clean versions of input strings
-	$safe_f_name = mysqli_real_escape_string($mysqli, $_POST['f_name']);
-	$safe_l_name = mysqli_real_escape_string($mysqli, $_POST['l_name']);
-	$safe_address = mysqli_real_escape_string($mysqli, $_POST['address']);
-	$safe_city = mysqli_real_escape_string($mysqli, $_POST['city']);
-	$safe_state = mysqli_real_escape_string($mysqli, $_POST['state']);
-	$safe_zipcode = mysqli_real_escape_string($mysqli, $_POST['zipcode']);
-	$safe_tel_number = mysqli_real_escape_string($mysqli, $_POST['tel_number']);
-	$safe_fax_number = mysqli_real_escape_string($mysqli, $_POST['fax_number']);
-	$safe_email = mysqli_real_escape_string($mysqli, $_POST['email']);
-	$safe_note = mysqli_real_escape_string($mysqli, $_POST['note']);
-
-	//add to master_name table
+	
+	// connect to database
+	doDB ();
+	
+	// create clean versions of input strings
+	$safe_f_name = mysqli_real_escape_string ( $mysqli, $_POST ['f_name'] );
+	$safe_l_name = mysqli_real_escape_string ( $mysqli, $_POST ['l_name'] );
+	$safe_address = mysqli_real_escape_string ( $mysqli, $_POST ['address'] );
+	$safe_city = mysqli_real_escape_string ( $mysqli, $_POST ['city'] );
+	$safe_state = mysqli_real_escape_string ( $mysqli, $_POST ['state'] );
+	$safe_zipcode = mysqli_real_escape_string ( $mysqli, $_POST ['zipcode'] );
+	$safe_tel_number = mysqli_real_escape_string ( $mysqli, $_POST ['tel_number'] );
+	$safe_fax_number = mysqli_real_escape_string ( $mysqli, $_POST ['fax_number'] );
+	$safe_email = mysqli_real_escape_string ( $mysqli, $_POST ['email'] );
+	$safe_note = mysqli_real_escape_string ( $mysqli, $_POST ['note'] );
+	
+	// add to master_name table
 	$add_master_sql = "INSERT INTO master_name (date_added, date_modified, f_name, l_name)
-                       VALUES (now(), now(), '".$safe_f_name."', '".$safe_l_name."')";
-	$add_master_res = mysqli_query($mysqli, $add_master_sql) or die(mysqli_error($mysqli));
-
-	//get master_id for use with other tables
-	$master_id = mysqli_insert_id($mysqli);
-
-	if (($_POST['address']) || ($_POST['city']) || ($_POST['state']) || ($_POST['zipcode'])) {
-		//something relevant, so add to address table
+                       VALUES (now(), now(), '" . $safe_f_name . "', '" . $safe_l_name . "')";
+	$add_master_res = mysqli_query ( $mysqli, $add_master_sql ) or die ( mysqli_error ( $mysqli ) );
+	
+	// get master_id for use with other tables
+	$master_id = mysqli_insert_id ( $mysqli );
+	
+	if (($_POST ['address']) || ($_POST ['city']) || ($_POST ['state']) || ($_POST ['zipcode'])) {
+		// something relevant, so add to address table
 		$add_address_sql = "INSERT INTO address (master_id, date_added, date_modified,
-		                    address, city, state, zipcode, type)  VALUES ('".$master_id."',
-		                    now(), now(), '".$safe_address."', '".$safe_city."',
-		                    '".$safe_state."' , '".$safe_zipcode."' , '".$_POST['add_type']."')";
-		$add_address_res = mysqli_query($mysqli, $add_address_sql) or die(mysqli_error($mysqli));
+		                    address, city, state, zipcode, type)  VALUES ('" . $master_id . "',
+		                    now(), now(), '" . $safe_address . "', '" . $safe_city . "',
+		                    '" . $safe_state . "' , '" . $safe_zipcode . "' , '" . $_POST ['add_type'] . "')";
+		$add_address_res = mysqli_query ( $mysqli, $add_address_sql ) or die ( mysqli_error ( $mysqli ) );
 	}
-
-	if ($_POST['tel_number']) {
-		//something relevant, so add to telephone table
+	
+	if ($_POST ['tel_number']) {
+		// something relevant, so add to telephone table
 		$add_tel_sql = "INSERT INTO telephone (master_id, date_added, date_modified,
-		                tel_number, type)  VALUES ('".$master_id."', now(), now(),
-		                '".$safe_tel_number."', '".$_POST['tel_type']."')";
-		$add_tel_res = mysqli_query($mysqli, $add_tel_sql) or die(mysqli_error($mysqli));
+		                tel_number, type)  VALUES ('" . $master_id . "', now(), now(),
+		                '" . $safe_tel_number . "', '" . $_POST ['tel_type'] . "')";
+		$add_tel_res = mysqli_query ( $mysqli, $add_tel_sql ) or die ( mysqli_error ( $mysqli ) );
 	}
-
-	if ($_POST['fax_number']) {
-		//something relevant, so add to fax table
+	
+	if ($_POST ['fax_number']) {
+		// something relevant, so add to fax table
 		$add_fax_sql = "INSERT INTO fax (master_id, date_added, date_modified,
-		                fax_number, type)  VALUES ('".$master_id."', now(), now(),
-		                '".$safe_fax_number."', '".$_POST['fax_type']."')";
-		$add_fax_res = mysqli_query($mysqli, $add_fax_sql) or die(mysqli_error($mysqli));
+		                fax_number, type)  VALUES ('" . $master_id . "', now(), now(),
+		                '" . $safe_fax_number . "', '" . $_POST ['fax_type'] . "')";
+		$add_fax_res = mysqli_query ( $mysqli, $add_fax_sql ) or die ( mysqli_error ( $mysqli ) );
 	}
-
-	if ($_POST['email']) {
-		//something relevant, so add to email table
+	
+	if ($_POST ['email']) {
+		// something relevant, so add to email table
 		$add_email_sql = "INSERT INTO email (master_id, date_added, date_modified,
-		                  email, type)  VALUES ('".$master_id."', now(), now(),
-		                  '".$safe_email."', '".$_POST['email_type']."')";
-		$add_email_res = mysqli_query($mysqli, $add_email_sql) or die(mysqli_error($mysqli));
+		                  email, type)  VALUES ('" . $master_id . "', now(), now(),
+		                  '" . $safe_email . "', '" . $_POST ['email_type'] . "')";
+		$add_email_res = mysqli_query ( $mysqli, $add_email_sql ) or die ( mysqli_error ( $mysqli ) );
 	}
-
-	if ($_POST['note']) {
-		//something relevant, so add to notes table
+	
+	if ($_POST ['note']) {
+		// something relevant, so add to notes table
 		$add_notes_sql = "INSERT INTO personal_notes (master_id, date_added, date_modified,
-		                  note)  VALUES ('".$master_id."', now(), now(), '".$safe_note."')";
-		$add_notes_res = mysqli_query($mysqli, $add_notes_sql) or die(mysqli_error($mysqli));
+		                  note)  VALUES ('" . $master_id . "', now(), now(), '" . $safe_note . "')";
+		$add_notes_res = mysqli_query ( $mysqli, $add_notes_sql ) or die ( mysqli_error ( $mysqli ) );
 	}
-	mysqli_close($mysqli);
+	mysqli_close ( $mysqli );
 	$display_block = "<p>Your entry has been added.  Would you like to <a href=\"addentry.php\">add another</a>?</p>";
 }
 ?>
@@ -151,7 +150,7 @@ END_OF_TEXT;
 <title>Add an Entry</title>
 </head>
 <body>
-<h1>Add an Entry</h1>
+	<h1>Add an Entry</h1>
 <?php echo $display_block; ?>
 </body>
 </html>

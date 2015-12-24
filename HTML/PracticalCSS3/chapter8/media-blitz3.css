@@ -1,0 +1,579 @@
+/* || basic page layout and styling */
+html {
+	background-color: #7109AA;
+	margin: 0;
+}
+
+body {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+nav {
+	float: left;
+	width: 200px;
+	margin-left: 10px;
+}
+
+#main-panel {
+	margin-left: 220px;
+}
+
+#video-content {
+	float: left;
+	width: 60%;
+}
+
+#related {
+	float: right;
+	width: 39%;
+}
+
+footer {
+	clear: both;
+	padding: 2rem;
+}
+
+/* || Typography and link styling */
+html {
+	font-size: 62.5%;
+}
+
+h1 {
+	font-family: 'Monoton', cursive;
+	font-size: 10rem;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: white;
+	text-shadow: 1px 1px 1px #333, 2px 2px 1px #333, 3px 3px 1px #333, 4px
+		4px 1px #333, 5px 5px 1px #333, 6px 6px 1px #333;
+}
+
+h2 {
+	margin: 0;
+	font-family: 'Monoton', cursive;
+	font-size: 3.5rem;
+	color: #D660CC;
+	text-shadow: 1px 1px 1px #333, 2px 2px 1px #333, 3px 3px 1px #333, 4px
+		4px 1px #333, 5px 5px 1px #333, 6px 6px 1px #333;
+}
+
+nav {
+	font-family: 'Monofett', cursive;
+	font-size: 3.5rem;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+nav ul li {
+	padding-bottom: 1rem;
+}
+
+nav ul:first-child {
+	padding-top: 2rem;
+}
+
+nav ul:first-child a,nav ul:first-child a:visited {
+	color: #D660CC;
+	text-decoration: none;
+	display: inline-block;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
+}
+
+nav ul:first-child a:hover,nav ul:first-child a:focus {
+	color: #7109AA;
+}
+
+nav ul:last-child a,nav ul:last-child a:visited {
+	color: black;
+	text-decoration: none;
+	display: block;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
+}
+
+nav ul:last-child a:hover,nav ul:last-child a:focus {
+	color: #666666;
+}
+
+footer p,footer ul {
+	font-size: 1.4rem;
+	color: white;
+}
+
+footer a,footer a:visited {
+	color: white;
+	text-decoration: underline;
+}
+
+footer a:hover,footer a:focus {
+	text-decoration: none;
+}
+
+footer li {
+	padding-bottom: 1rem;
+}
+
+/* || Media styling */
+video {
+	max-width: 100%;
+}
+
+#related article {
+	background-color: white;
+	float: left;
+	width: 35%;
+	margin: 2rem 2%;
+	padding: 2rem 3%;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#related img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+#video-reel article {
+	width: 33%;
+	display: inline-block;
+	opacity: 0.7;
+}
+
+#video-reel article:hover {
+	opacity: 1;
+}
+
+#video-reel img {
+	max-width: 100%;
+}
+
+/* || assorted bling and animation */
+html {
+	background: url(images/pattern.png);
+}
+
+header {
+	background: -webkit-repeating-linear-gradient(top, #7109AA, #7109AA 5px, #D660CC 6px
+		, #D660CC 10px);
+	background: -moz-repeating-linear-gradient(top, #7109AA, #7109AA 5px, #D660CC 6px,
+		#D660CC 10px);
+	background: -ms-repeating-linear-gradient(top, #7109AA, #7109AA 5px, #D660CC 6px,
+		#D660CC 10px);
+	background: -o-repeating-linear-gradient(top, #7109AA, #7109AA 5px, #D660CC 6px,
+		#D660CC 10px);
+	background: repeating-linear-gradient(top, #7109AA, #7109AA 5px, #D660CC 6px,
+		#D660CC 10px);
+	background-color: #7109AA;
+}
+
+footer {
+	background: -webkit-linear-gradient(top, #D660CC 40%, #7109AA);
+	background: -moz-linear-gradient(top, #D660CC 40%, #7109AA);
+	background: -ms-linear-gradient(top, #D660CC 40%, #7109AA);
+	background: -o-linear-gradient(top, #D660CC 40%, #7109AA);
+	background: linear-gradient(top, #D660CC 40%, #7109AA);
+	background-color: #7109AA;
+}
+
+@
+-webkit-keyframes colour-cycle { 0% {
+	color: rgb(0, 0, 0);
+}
+
+20%
+{
+color
+:
+ 
+rgb
+(255
+,
+0,255);
+}
+40%
+{
+color
+:
+ 
+rgb
+(0
+,
+0,255);
+}
+60%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,255);
+}
+80%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,0);
+}
+100%
+{
+color
+:
+ 
+rgb
+(255
+,
+255,255);
+}
+}
+@
+-moz-keyframes colour-cycle { 0% {
+	color: rgb(0, 0, 0);
+}
+
+20%
+{
+color
+:
+ 
+rgb
+(255
+,
+0,255);
+}
+40%
+{
+color
+:
+ 
+rgb
+(0
+,
+0,255);
+}
+60%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,255);
+}
+80%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,0);
+}
+100%
+{
+color
+:
+ 
+rgb
+(255
+,
+255,255);
+}
+}
+@
+-ms-keyframes colour-cycle { 0% {
+	color: rgb(0, 0, 0);
+}
+
+20%
+{
+color
+:
+ 
+rgb
+(255
+,
+0,255);
+}
+40%
+{
+color
+:
+ 
+rgb
+(0
+,
+0,255);
+}
+60%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,255);
+}
+80%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,0);
+}
+100%
+{
+color
+:
+ 
+rgb
+(255
+,
+255,255);
+}
+}
+@
+-o-keyframes colour-cycle { 0% {
+	color: rgb(0, 0, 0);
+}
+
+20%
+{
+color
+:
+ 
+rgb
+(255
+,
+0,255);
+}
+40%
+{
+color
+:
+ 
+rgb
+(0
+,
+0,255);
+}
+60%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,255);
+}
+80%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,0);
+}
+100%
+{
+color
+:
+ 
+rgb
+(255
+,
+255,255);
+}
+}
+@
+keyframes colour-cycle { 0% {
+	color: rgb(0, 0, 0);
+}
+
+20%
+{
+color
+:
+ 
+rgb
+(255
+,
+0,255);
+}
+40%
+{
+color
+:
+ 
+rgb
+(0
+,
+0,255);
+}
+60%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,255);
+}
+80%
+{
+color
+:
+ 
+rgb
+(0
+,
+255,0);
+}
+100%
+{
+color
+:
+ 
+rgb
+(255
+,
+255,255);
+}
+}
+h1 {
+	-webkit-animation: colour-cycle 20s linear infinite alternate;
+	-moz-animation: colour-cycle 20s linear infinite alternate;
+	-ms-animation: colour-cycle 20s linear infinite alternate;
+	-o-animation: colour-cycle 20s linear infinite alternate;
+	animation: colour-cycle 20s linear infinite alternate;
+}
+
+/* || media queries */
+@media all and (max-width: 1024px) {
+	nav {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+	#main-panel {
+		margin-left: 0px;
+	}
+	nav ul {
+		width: 100%;
+	}
+	nav li {
+		display: inline-block;
+	}
+	nav li a {
+		display: block;
+		margin-right: 3rem;
+	}
+	nav hr {
+		width: 90%;
+	}
+	body {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	nav {
+		display: table-caption;
+		caption-side: bottom;
+	}
+}
+
+@media all and (max-width: 870px) {
+	nav {
+		font-size: 3rem;
+	}
+	nav li a {
+		margin-right: 1rem;
+	}
+}
+
+@media all and (max-width: 800px) {
+	h1 {
+		font-size: 6rem;
+	}
+	#video-content {
+		width: 70%;
+	}
+	#related {
+		width: 29%;
+	}
+	#related article {
+		float: none;
+		width: 65%;
+		margin: 2rem auto;
+	}
+	#related h2 {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	#video-reel article {
+		width: 49%;
+	}
+	#video-reel h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+	}
+}
+
+@media all and (max-width: 600px) {
+	#video-content {
+		width: 100%;
+		float: none;
+	}
+	#related {
+		width: 100%;
+		float: none;
+	}
+	#related article {
+		float: left;
+		width: 39%;
+		margin: 2rem 2%;
+	}
+}
+
+@media all and (max-width: 350px) {
+	#related article {
+		float: none;
+		width: 70%;
+		margin: 2rem auto;
+		padding: 2rem 0;
+	}
+	h1 {
+		font-size: 3.5rem;
+	}
+}

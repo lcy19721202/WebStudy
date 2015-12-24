@@ -1,0 +1,414 @@
+/* || font imports */
+@font-face {
+	font-family: 'ArvoRegular';
+	src: url('fonts/Arvo-Regular-webfont.eot');
+	src: url('fonts/Arvo-Regular-webfont.eot?#iefix')
+		format('embedded-opentype'), url('fonts/Arvo-Regular-webfont.woff')
+		format('woff'), url('fonts/Arvo-Regular-webfont.ttf')
+		format('truetype'), url('fonts/Arvo-Regular-webfont.svg#ArvoRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ArvoBoldItalic';
+	src: url('fonts/Arvo-BoldItalic-webfont.eot');
+	src: url('fonts/Arvo-BoldItalic-webfont.eot?#iefix')
+		format('embedded-opentype'), url('fonts/Arvo-BoldItalic-webfont.woff')
+		format('woff'), url('fonts/Arvo-BoldItalic-webfont.ttf')
+		format('truetype'),
+		url('fonts/Arvo-BoldItalic-webfont.svg#ArvoBoldItalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* || typography */
+html {
+	font-size: 62.5%;
+}
+
+form h1 {
+	font-family: ArvoBoldItalic;
+	letter-spacing: 1px;
+	letter-spacing: 0.1rem;
+	font-size: 18px;
+	font-size: 1.8rem;
+	width: 260px;
+	width: 26rem;
+}
+
+form h2 {
+	font-family: ArvoBoldItalic;
+	letter-spacing: 0.5px;
+	letter-spacing: 0.05rem;
+	font-size: 30px;
+	font-size: 3rem;
+	text-align: center;
+}
+
+form h1,form h2 {
+	text-shadow: 1px 1px 1px white;
+}
+
+label,input,textarea {
+	font-family: ArvoRegular;
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+/* || form layout and styling */
+form {
+	position: absolute;
+	top: 1px;
+	top: 1rem;
+	left: -380px;
+	left: -38rem;
+	width: 330px;
+	width: 33rem;
+	height: 23px;
+	height: 23rem;
+	padding: 30px 60px 50px 60px;
+	padding: 3rem 6rem 5rem 6rem;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+#front,#back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 330px;
+	width: 33rem;
+	height: 230px;
+	height: 23rem;
+	padding: 30px 60px 50px 60px;
+	padding: 3rem 6rem 5rem 6rem;
+	background: -webkit-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: -moz-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: -ms-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: -o-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background-color: white;
+	color: #001F1D;
+	border-radius: 0 2rem 2rem 0;
+	box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.6);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+div label {
+	position: relative;
+	display: block;
+	float: left;
+	text-align: right;
+	padding-top: 6px;
+	padding-top: 0.6rem;
+	padding-right: 10px;
+	padding-right: 1rem;
+	width: 120px;
+	width: 12rem;
+}
+
+form div {
+	clear: left;
+	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
+}
+
+input,textarea {
+	width: 180px;
+	width: 18rem;
+	box-shadow: inset 1px 1px 2px black;
+	padding: 6px 2px 2px 4px;
+	padding: 0.6rem 0.2rem 0.2rem 0.4rem;
+	border: none;
+	border-radius: 1rem;
+}
+
+input[type="submit"] {
+	width: 90px;
+	width: 9rem;
+	margin-left: 130px;
+	margin-left: 13rem;
+	padding: 7px;
+	padding: 0.7rem;
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0));
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0));
+	background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0));
+	background: -o-linear-gradient(top, rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0));
+	background: linear-gradient(top, rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0));
+	box-shadow: 1px 1px 1px black;
+	text-shadow: 1px 1px 1px black;
+}
+
+.extended-info {
+	position: absolute;
+	left: -55px;
+	left: -5.5rem;
+	top: 25px;
+	top: 2.5rem;
+	opacity: 0;
+	width: 120px;
+	width: 12rem;
+	background: -webkit-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: -moz-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: -ms-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: -o-linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background: linear-gradient(bottom right, rgba(0, 153, 153, 1),
+		rgba(0, 153, 153, 0.5));
+	background-color: white;
+	z-index: 3;
+	border-radius: 1rem 0 1rem 1rem;
+	border: 2px solid black;
+	padding: 10px;
+	padding: 1rem;
+	-webkit-transition: 1.5s all;
+	-moz-transition: 1.5s all;
+	-ms-transition: 1.5s all;
+	-o-transition: 1.5s all;
+	transition: 1.5s all;
+}
+
+div label:hover .extended-info,div label:focus .extended-info {
+	opacity: 1;
+}
+
+/* || transforms, transitions, animations */
+h1 {
+	position: absolute;
+	-webkit-transform: rotate(90deg) translate(9.5rem, -23rem);
+	-moz-transform: rotate(90deg) translate(9.5rem, -23rem);
+	-ms-transform: rotate(90deg) translate(9.5rem, -23rem);
+	-o-transform: rotate(90deg) translate(9.5rem, -24rem);
+	transform: rotate(90deg) translate(9.5rem, -23rem);
+}
+
+#front {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	-ms-transform: rotateX(0deg);
+	-o-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	z-index: 2;
+}
+
+#back {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);
+	-o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+@
+-webkit-keyframes form-rotate {from { -webkit-transform:rotateX(0deg);
+	
+}
+
+to {
+	-webkit-transform: rotateX(180deg);
+}
+
+}
+@
+-moz-keyframes form-rotate {from { -moz-transform:rotateX(0deg);
+	
+}
+
+to {
+	-moz-transform: rotateX(180deg);
+}
+
+}
+@
+-ms-keyframes form-rotate {from { -ms-transform:rotateX(0deg);
+	
+}
+
+to {
+	-ms-transform: rotateX(180deg);
+}
+
+}
+@
+-o-keyframes form-rotate {from { -o-transform:rotateX(0deg);
+	
+}
+
+to {
+	-o-transform: rotateX(180deg);
+}
+
+}
+@
+keyframes form-rotate {from { -transform:rotateX(0deg);
+	
+}
+
+to {
+	-transform: rotateX(180deg);
+}
+
+}
+.form-rotate {
+	-webkit-animation: form-rotate 1s forwards;
+	-moz-animation: form-rotate 1s forwards;
+	-ms-animation: form-rotate 1s forwards;
+	-o-animation: form-rotate 1s forwards;
+	animation: form-rotate 1s forwards;
+}
+
+@
+-webkit-keyframes form-out {from { -webkit-transform:translateX(0rem);
+	
+}
+
+to {
+	-webkit-transform: translateX(38rem);
+}
+
+}
+@
+-moz-keyframes form-out {from { -moz-transform:translateX(0rem);
+	
+}
+
+to {
+	-moz-transform: translateX(38rem);
+}
+
+}
+@
+-ms-keyframes form-out {from { -ms-transform:translateX(0rem);
+	
+}
+
+to {
+	-ms-transform: translateX(38rem);
+}
+
+}
+@
+-o-keyframes form-out {from { -o-transform:translateX(0rem);
+	
+}
+
+to {
+	-o-transform: translateX(38rem);
+}
+
+}
+@
+keyframes form-out {from { transform:translateX(0rem);
+	
+}
+
+to {
+	transform: translateX(38rem);
+}
+
+}
+.form-out {
+	-webkit-animation: form-out 1s forwards;
+	-moz-animation: form-out 1s forwards;
+	-ms-animation: form-out 1s forwards;
+	-o-animation: form-out 1s forwards;
+	animation: form-out 1s forwards;
+}
+
+@
+-webkit-keyframes form-in {from { -webkit-transform:translateX(38rem);
+	
+}
+
+to {
+	-webkit-transform: translateX(0rem);
+}
+
+}
+@
+-moz-keyframes form-in {from { -moz-transform:translateX(38rem);
+	
+}
+
+to {
+	-moz-transform: translateX(0rem);
+}
+
+}
+@
+-ms-keyframes form-in {from { -ms-transform:translateX(38rem);
+	
+}
+
+to {
+	-ms-transform: translateX(0rem);
+}
+
+}
+@
+-o-keyframes form-in {from { -o-transform:translateX(38rem);
+	
+}
+
+to {
+	-o-transform: translateX(0rem);
+}
+
+}
+@
+keyframes form-in {from { transform:translateX(38rem);
+	
+}
+
+to {
+	transform: translateX(0rem);
+}
+
+}
+.form-in {
+	-webkit-animation: form-in 1s forwards;
+	-moz-animation: form-in 1s forwards;
+	-ms-animation: form-in 1s forwards;
+	-o-animation: form-in 1s forwards;
+	animation: form-in 1s forwards;
+}
+
+/* || set pointers */
+h1:hover,input[type="submit"]:hover {
+	cursor: pointer;
+}
+
+/* || modernizr fallbacks */
+.no-cssgradients #front,.no-cssgradients #back {
+	background-color: #009999;
+}
+
+.no-csstransforms h1 {
+	position: static;
+}
+
+.no-csstransforms .extended-info {
+	display: none;
+}

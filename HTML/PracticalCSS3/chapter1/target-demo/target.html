@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>:target demo</title>
+
+<style>
+
+/* Web font imports */
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('fonts/league_gothic-webfont.eot');
+	src: url('fonts/league_gothic-webfont.eot?#iefix')
+		format('embedded-opentype'), url('fonts/league_gothic-webfont.woff')
+		format('woff'), url('fonts/league_gothic-webfont.ttf')
+		format('truetype'),
+		url('fonts/league_gothic-webfont.svg#LeagueGothicRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'VollkornRegular';
+	src: url('fonts/vollkorn-regular-webfont.eot');
+	src: url('fonts/vollkorn-regular-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('fonts/vollkorn-regular-webfont.woff') format('woff'),
+		url('fonts/vollkorn-regular-webfont.ttf') format('truetype'),
+		url('fonts/vollkorn-regular-webfont.svg#VollkornRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+/* General styling and layout */
+html,body {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background: #D9CEAD;
+	font-size: 62.5%;
+}
+
+#wrapper {
+	width: 80rem;
+}
+
+article[id*=tab] {
+	width: 47rem;
+	height: 35rem;
+	padding: 2rem;
+	margin: 1rem 1rem 0 3rem;
+	background: #fff;
+	box-shadow: inset 2px 2px 10px #888;
+	border: 2px solid #473C35;
+	border-radius: 10px;
+	position: absolute;
+	left: 0em;
+	opacity: 0;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-ms-transition: 1s all;
+	-o-transition: 1s all;
+	transition: 1s all;
+}
+
+nav {
+	width: 80rem;
+	margin-left: 3rem;
+}
+
+ul {
+	width: 80rem;
+}
+
+aside {
+	margin-top: 1rem;
+	width: 20rem;
+	height: 35rem;
+	background: #fff;
+	box-shadow: inset 2px 2px 10px #888;
+	border: 2px solid #473C35;
+	border-radius: 10px;
+	padding: 2rem;
+	float: right;
+}
+
+article[id*=tab]:target {
+	opacity: 1;
+	z-index: 5;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	background-color: #9C968B;
+	border: 1px solid #473C35;
+	border-radius: 5px;
+	display: inline-block;
+	margin-right: 1rem;
+	line-height: 2.5em;
+	width: 16rem;
+	text-align: center;
+	list-style: none;
+	text-decoration: none;
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+}
+
+li:last-child a {
+	margin-right: 0rem;
+}
+
+li a,li a:link,li a:visited {
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 1px 1px 1px black;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-ms-transition: 1s all;
+	-o-transition: 1s all;
+	transition: 1s all;
+}
+
+li a:hover,li a:focus {
+	background-color: #ddd;
+	color: #A36D5C;
+}
+
+li a:active {
+	box-shadow: inset 2px 2px 10px #000;
+}
+
+/* || typography stuff */
+article,aside {
+	font-family: VollkornRegular;
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+
+li {
+	font-family: sans-serif;
+}
+
+h1,h2,h3 {
+	font-family: LeagueGothicRegular;
+	margin: 0;
+	color: #8A866A;
+	text-shadow: 1px 1px 1px black;
+	letter-spacing: 0.05rem;
+	word-spacing: 0.2rem;
+}
+
+code {
+	color: #A36D5C;
+	font-size: 1.2rem;
+}
+
+h1 {
+	font-size: 44em;
+	margin: 0.2rem 0 0.3rem 1.16rem;
+}
+
+h2 {
+	font-size: 4rem;
+	padding: 0 0 0.2rem 0;
+	line-height: 4rem;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+	<nav>
+
+		<ul>
+			<li><a href="#tab1" tabindex="1">Page 1</a></li>
+			<li><a href="#tab2" tabindex="2">Page 2</a></li>
+			<li><a href="#tab3" tabindex="3">Page 3</a></li>
+			<li><a href="#tab4" tabindex="4">Page 4</a></li>
+		</ul>
+
+	</nav>
+
+	<div id="wrapper">
+
+		<aside>
+			<h2>:target</h2>
+
+			<p>
+				Here, the
+				<code>:target</code>
+				pseudo-class is used to create CSS-only tabbed navigation.
+				<code>&lt;article&gt;</code>
+				"tabs" are absolutely positioned on top of one another and given
+				<code>opacity: 0;</code>
+				, then a transition is used to make tabs smoothly appear when the
+				links that target them are clicked, i.e. when they become a target (
+				<code>article[id*=tab]:target {}</code>
+				).
+			</p>
+		</aside>
+
+		<article id="tab1">
+
+			<h2>Page 1: This is the first page in the :target example</h2>
+
+
+		</article>
+
+		<article id="tab2">
+
+			<h2>Page 2: Let's move to another page</h2>
+
+
+		</article>
+
+		<article id="tab3">
+
+			<h2>Page 3: And this is the third page - are you excited yet?</h2>
+
+
+
+		</article>
+
+		<article id="tab4">
+
+			<h2>Page 4: Actually, I'm quite disappointed by now, as this
+				content sucks.</h2>
+
+
+		</article>
+
+	</div>
+
+</body>
+</html>

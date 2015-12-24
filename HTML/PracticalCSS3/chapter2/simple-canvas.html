@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Simple canvas example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+canvas {
+	border: 1px solid black;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<canvas id="canvas" width="480" height="320">
+    <!-- fallback content here -->
+  </canvas>
+
+
+</body>
+
+<script>    
+    var c = document.getElementById("canvas");  
+    var context = c.getContext("2d");  
+  
+    context.fillStyle = "rgb(0,0,200)";  
+    context.fillRect (100, 50, 100, 150);    
+  </script>
+</html>

@@ -1,10 +1,10 @@
 <?php
-if ($_COOKIE['auth'] == "1") {
+if ($_COOKIE ['auth'] == "1") {
 	$display_block = "<p>You are an authorized user.</p>";
 } else {
-	//redirect back to login form if not authorized
-	header("Location: userlogin.html");
-	exit;
+	// redirect back to login form if not authorized
+	header ( "Location: userlogin.html" );
+	exit ();
 }
 ?>
 <!DOCTYPE html>

@@ -2,32 +2,33 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Directory Contents</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Directory Contents</title>
 </head>
 <body>
-<?php // Script 11.5 - list_dir.php
+<?php 
+// Script 11.5 - list_dir.php
 /* This script lists the directories and files in a directory. */
 
 // Set the time zone:
-date_default_timezone_set('America/New_York');
+date_default_timezone_set ( 'America/New_York' );
 
 // Set the directory name and scan it:
 $search_dir = '.';
-$contents = scandir($search_dir);
+$contents = scandir ( $search_dir );
 
 // List the directories first...
 // Print a caption and start a list:
 print '<h2>Directories</h2>
 <ul>';
-foreach ($contents as $item) {
-	if ( (is_dir($item)) AND (substr($item, 0, 1) != '.') ) {
+foreach ( $contents as $item ) {
+	if ((is_dir ( $item )) and (substr ( $item, 0, 1 ) != '.')) {
 		print "<li>$item</li>\n";
 	}
 }
 
 print '</ul>'; // Close the list.
-
+               
 // Create a table header:
 print '<hr /><h2>Files</h2>
 <table cellpadding="2" cellspacing="2" align="left">
@@ -38,14 +39,14 @@ print '<hr /><h2>Files</h2>
 </tr>';
 
 // List the files:
-foreach ($contents as $item) {
-	if ( (is_file($item)) AND (substr($item, 0, 1) != '.') ) {
-	
+foreach ( $contents as $item ) {
+	if ((is_file ( $item )) and (substr ( $item, 0, 1 ) != '.')) {
+		
 		// Get the file size:
-		$fs = filesize($item);
+		$fs = filesize ( $item );
 		
 		// Get the file's modification date:
-		$lm = date('F j, Y', filemtime($item));
+		$lm = date ( 'F j, Y', filemtime ( $item ) );
 		
 		// Print the information:
 		print "<tr>
@@ -53,9 +54,7 @@ foreach ($contents as $item) {
 		<td>$fs bytes</td>
 		<td>$lm</td>
 		</tr>\n";
-	
 	} // Close the IF.
-
 } // Close the FOREACH.
 
 print '</table>'; // Close the HTML table.

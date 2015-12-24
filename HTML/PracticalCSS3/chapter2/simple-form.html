@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Simple HTML5 form example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+body {
+	background: #ffb273;
+	font-family: arial;
+}
+
+form {
+	width: 600px;
+	margin: 5% auto;
+}
+
+fieldset {
+	border: 3px solid #a44c00;
+	margin-bottom: 5%;
+	border-radius: 20px;
+}
+
+legend {
+	font-size: 150%;
+	background: #a44c00;
+	color: #ffffff;
+	border-radius: 10px;
+	padding: 2%;
+}
+
+div {
+	padding-bottom: 5%;
+}
+
+div:first-of-type {
+	padding-top: 5%;
+}
+
+label {
+	width: 30%;
+	margin-right: 5%;
+	float: left;
+	clear: both;
+	text-align: right;
+}
+
+input {
+	width: 30%;
+}
+
+input[type="submit"],input[type="color"] {
+	width: 15%;
+}
+
+input[type="submit"] {
+	font-size: 120%;
+	background: #a64b00;
+	color: #fff;
+	padding: 3px;
+	border-radius: 10px;
+}
+
+input:valid {
+	color: green;
+}
+
+input[type="submit"]:valid {
+	color: #fff;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<h1>HTML5 form examples</h1>
+
+	<form method="post" id="example-form">
+
+		<fieldset>
+
+			<legend>Some basic new types</legend>
+
+			<div>
+				<label for="range">Range slider:</label> <input type="range"
+					id="range" name="range">
+			</div>
+
+			<div>
+				<label for="date">Date picker:</label> <input type="date" id="date"
+					name="date">
+			</div>
+
+			<div>
+				<label for="color">Color picker:</label> <input type="color"
+					id="color" name="color">
+			</div>
+
+			<div>
+				<label for="url">URL field:</label> <input type="url" id="url"
+					name="url">
+			</div>
+
+			<div>
+				<label for="email">E-mail field:</label> <input type="email"
+					id="email" name="email">
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+
+			<legend>Validation examples</legend>
+
+			<div>
+				<label for="req-text">Required text:</label> <input type="text"
+					id="req-text" name="req-text" required>
+			</div>
+
+			<div>
+				<label for="req-url">Required URL:</label> <input type="url"
+					id="req-url" name="req-url" required>
+			</div>
+
+			<div>
+				<label for="req-num-minmax">Required number with min and
+					max:</label> <input type="number" id="req-num-minmax" name="req-num-minmax"
+					required min="1" max="100">
+			</div>
+
+			<div>
+				<label for="req-num-pattern">Required text with pattern
+					(three digits of between 1 and 6):</label> <input type="text"
+					id="req-num-pattern" name="req-num-pattern" required
+					pattern="[1-6]{3}">
+			</div>
+
+		</fieldset>
+
+		<input type="submit" id="submit" name="submit" value="Submit!">
+
+	</form>
+
+</body>
+</html>

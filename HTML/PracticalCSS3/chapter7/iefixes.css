@@ -1,0 +1,44 @@
+body {
+	width: 800px;
+}
+
+h1 {
+	font-size: 54px;
+	padding-top: 20px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+p,li {
+	font-size: 14px;
+}
+
+header p {
+	top: 100px;
+}
+
+footer {
+	padding: 20px 0 20px 0;
+}
+
+footer ul,footer h2 {
+	padding-left: 20px;
+}
+
+section {
+	padding: 20px 0 20px 0;
+}
+
+article {
+	width: 350px;
+	height: 350px;
+	padding: 0 10px 0 10px;
+}
+
+article img {
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}

@@ -2,17 +2,21 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Registration</title>
-	<style type="text/css" media="screen">
-		.error { color: red; }
-	</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration</title>
+<style type="text/css" media="screen">
+.error {
+	color: red;
+}
+</style>
 </head>
 <body>
-<h2>Registration Results</h2>
-<?php // Script 6.3 - handle_reg.php #2
-/* This script receives eight values from register.html:
-email, password, confirm, month, day, year, color, submit */
+	<h2>Registration Results</h2>
+<?php 
+// Script 6.3 - handle_reg.php #2
+/*
+ * This script receives eight values from register.html: email, password, confirm, month, day, year, color, submit
+ */
 
 // Address error management, if you want.
 
@@ -20,13 +24,13 @@ email, password, confirm, month, day, year, color, submit */
 $okay = TRUE;
 
 // Validate the email address:
-if (empty($_POST['email'])) {
+if (empty ( $_POST ['email'] )) {
 	print '<p class="error">Please enter your email address.</p>';
 	$okay = FALSE;
 }
 
 // Validate the password:
-if (empty($_POST['password'])) {
+if (empty ( $_POST ['password'] )) {
 	print '<p class="error">Please enter your password.</p>';
 	$okay = FALSE;
 }

@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Simple multi-col</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link
+	href='http://fonts.googleapis.com/css?family=Lobster|Terminal+Dosis'
+	rel='stylesheet' type='text/css'>
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+/* || All the other stuff */
+html {
+	font-family: 'Terminal Dosis', sans-serif;
+	font-size: 62.5%;
+}
+
+h1,h2,h3 {
+	font-family: 'Lobster', cursive;
+}
+
+h1 {
+	font-size: 4.8rem;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 3rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+}
+
+h3 {
+	font-size: 2.4rem;
+}
+
+p,li {
+	font-size: 1.4rem;
+}
+
+header,footer {
+	height: 150px;
+	width: 100%;
+	color: #FCFE03;
+	background-color: #8B2101;
+}
+
+footer h2 {
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* || multi-col specific stuff */
+section {
+	padding: 2rem;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-rule: 3px solid #8B2101;
+	-moz-column-rule: 3px solid #8B2101;
+	column-rule: 3px solid #8B2101;
+	-webkit-column-gap: 2rem;
+	-moz-column-gap: 2rem;
+	column-gap: 2rem;
+}
+
+section h2:first-of-type {
+	margin-top: 0;
+}
+
+section h2 {
+	-webkit-column-span: all;
+	-moz-column-span: all;
+	column-span: all;
+}
+
+section h2+p,section img+p {
+	margin-top: 0;
+}
+
+section img {
+	-webkit-column-span: all;
+	-moz-column-span: all;
+	column-span: all;
+	margin: 1rem auto;
+}
+
+h3 {
+	-webkit-break-after: avoid-column;
+	-moz-break-after: avoid-column;
+	break-after: avoid-column;
+	-webkit-break-before: column;
+	-moz-break-before: column;
+	break-before: column;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<header>
+		<h1>Simple Multi-col example</h1>
+
+	</header>
+
+	<section id="main">
+
+		<h2>The first exciting part of the content</h2>
+
+		<h3>Third level heading</h3>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+			vel sapien augue. Nam sit amet erat non lacus malesuada tincidunt nec
+			a enim. Pellentesque nec justo leo, vel varius justo. Nullam elit
+			massa, malesuada eget laoreet id, lacinia non arcu. Cras odio neque,
+			molestie sit amet accumsan vitae, malesuada sit amet velit. Aenean
+			mauris nulla, sodales sit amet molestie a, malesuada in orci.
+			Maecenas vel enim augue. Donec rhoncus nibh eget ipsum sagittis
+			cursus. Cras ac diam nibh. Nam mauris tortor, feugiat fringilla
+			eleifend vel, hendrerit non enim.</p>
+
+		<h3>Third level heading</h3>
+
+		<ul>
+			<li>Nullam elementum porttitor dui ut elementum. Morbi aliquam
+				sem id elit mollis vitae accumsan odio tincidunt. Donec cursus
+				elementum erat dictum pellentesque.</li>
+			<li>Suspendisse magna quam, vehicula vitae viverra quis,
+				sollicitudin sed mi. Vivamus porta convallis lobortis. Proin metus
+				nisl, auctor a tristique in, commodo at erat.</li>
+			<li>Vestibulum eget ante nunc, sed fermentum nisi. Suspendisse
+				eget diam mi. Ut placerat tellus sed mauris interdum eget tristique
+				purus aliquet. Nunc rhoncus cursus elit vitae commodo.</li>
+		</ul>
+
+		<h3>Third level heading</h3>
+
+		<p>Pellentesque vel diam risus. Donec a neque risus, et convallis
+			nisi. Curabitur pellentesque nisl nisl. Maecenas id commodo diam.
+			Nunc bibendum mi et turpis porta eget lobortis tortor condimentum.
+			Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+			posuere cubilia Curae; Vivamus interdum luctus lorem, non commodo
+			ligula vestibulum faucibus. Ut sit amet eros eget nibh vestibulum
+			tincidunt ut eu justo. Vestibulum placerat, arcu vitae interdum
+			pellentesque, urna diam consectetur augue, sit amet faucibus mauris
+			mauris quis est. Pellentesque et malesuada nunc. Quisque accumsan
+			arcu eget quam porttitor sed tincidunt dolor malesuada. Donec auctor
+			augue a augue dignissim sit amet accumsan libero rutrum. Donec nec
+			mattis leo.</p>
+
+		<h2>The second exciting part of this content</h2>
+
+		<p>Suspendisse potenti. Vivamus at diam nec turpis suscipit
+			vulputate. Aenean aliquet, odio ac venenatis rhoncus, nunc mi
+			ultrices arcu, eget ullamcorper odio erat quis odio. Donec ac viverra
+			elit. Sed sem enim, convallis ut semper nec, placerat et mauris.
+			Morbi laoreet consequat lacus, a mollis risus eleifend nec. Cras
+			condimentum interdum facilisis. Nam malesuada lacinia eros eu
+			ullamcorper. Maecenas rutrum ullamcorper dictum. In lacinia congue
+			enim, vel auctor quam tristique nec. Fusce ac diam eros. Phasellus
+			sollicitudin leo a nibh elementum a imperdiet felis feugiat. Proin
+			ultrices est ut metus feugiat viverra. In hac habitasse platea
+			dictumst.</p>
+
+		<img src="images/sunset.jpg" alt="sunset image">
+
+		<h3>Third level heading</h3>
+
+		<p>In hac habitasse platea dictumst. Fusce consequat eros sit amet
+			erat tincidunt in molestie lacus feugiat. Duis pretium arcu sed odio
+			fermentum id semper justo tristique. Nullam tincidunt blandit
+			porttitor. Maecenas eu odio nulla, sit amet hendrerit odio. In
+			convallis rhoncus enim ac dignissim. Nam placerat aliquam lacus sed
+			pellentesque. Proin blandit, nunc et accumsan pulvinar, metus metus
+			semper purus, vitae euismod libero ligula tempor nulla. Etiam varius
+			ante eros.</p>
+
+		<p>Vivamus consequat faucibus laoreet. In hac habitasse platea
+			dictumst. Phasellus tempor metus vel turpis gravida lobortis. Fusce
+			nec orci urna, ut tempor magna. Phasellus vitae lacus erat. Phasellus
+			non tellus elit. Suspendisse est mauris, tristique vel venenatis ut,
+			eleifend ullamcorper sapien.</p>
+
+		<h3>Third level heading</h3>
+
+		<p>Proin porta rhoncus erat non dictum. Integer eu auctor nunc.
+			Donec vel cursus tortor. Integer diam magna, sollicitudin eleifend
+			feugiat vitae, faucibus ac eros. Nullam id metus vel diam vestibulum
+			laoreet. Nam rhoncus hendrerit dui id rutrum. In faucibus ultricies
+			erat id semper. Nam in ante nec neque venenatis ullamcorper id sit
+			amet nulla. Praesent eleifend pretium ante consectetur euismod. Morbi
+			hendrerit auctor purus et congue. Nullam nibh lacus, dapibus eget
+			blandit ut, aliquet a nisl. Vestibulum ante ipsum primis in faucibus
+			orci luctus et ultrices posuere cubilia Curae; Sed euismod lectus
+			dictum enim blandit mollis. Proin blandit condimentum sapien quis
+			consectetur. Vivamus ullamcorper lectus accumsan neque dignissim
+			suscipit. Quisque nec eros sit amet eros tempus mollis vel eu odio.</p>
+
+		<h3>Third level heading</h3>
+
+		<p>Class aptent taciti sociosqu ad litora torquent per conubia
+			nostra, per inceptos himenaeos. Suspendisse non tortor non metus
+			hendrerit dignissim semper a erat. Sed sodales egestas dui eu
+			dignissim. Nullam cursus metus sit amet purus mattis vitae vehicula
+			magna hendrerit. Aliquam erat volutpat. Cras accumsan nibh et quam
+			vulputate sit amet condimentum mauris bibendum. Ut at risus purus.
+			Morbi laoreet, mauris a pharetra viverra, diam turpis pulvinar dolor,
+			ac gravida sem sapien ac ligula. Vivamus eget augue mauris, quis
+			accumsan sem. Sed eros urna, imperdiet sit amet rhoncus id, feugiat
+			non justo. Fusce at arcu a eros faucibus lobortis nec vel augue.
+			Phasellus semper ipsum vel purus luctus non porta metus faucibus.
+			Donec in nunc libero, eget consequat ipsum. Lorem ipsum dolor sit
+			amet, consectetur adipiscing elit. Etiam augue nulla, malesuada et
+			convallis commodo, vestibulum vitae ipsum. Cras lobortis viverra
+			neque ut gravida.</p>
+
+		<h2>The summary: demystifying lorum ipsum</h2>
+
+		<p>Sed iaculis tellus id ipsum iaculis rhoncus. Fusce tristique
+			volutpat lacinia. Mauris ut augue tellus, convallis molestie odio.
+			Maecenas imperdiet turpis et magna eleifend consectetur. Donec
+			hendrerit ornare justo, ut accumsan purus fermentum in. Vivamus
+			rhoncus quam id nulla pulvinar iaculis. Suspendisse quis magna nulla,
+			et facilisis libero. Sed sit amet lectus mauris. Cras vehicula tempus
+			justo non malesuada. Aenean erat nunc, fermentum non mollis id,
+			iaculis quis felis. Donec malesuada vehicula erat sagittis tincidunt.
+			Proin nulla est, imperdiet a volutpat ac, mattis sit amet quam.</p>
+
+		<p>Curabitur sed urna in sem luctus ultrices in in ipsum.
+			Phasellus eget diam turpis. Vivamus quis metus sit amet lacus
+			ultrices auctor. Proin eget aliquet ligula. Maecenas a urna eu lorem
+			faucibus pharetra. Suspendisse faucibus sapien in tortor varius
+			rhoncus. Integer vehicula quam non lacus elementum vel condimentum
+			velit pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus
+			et ultrices posuere cubilia Curae; Sed non enim nulla. Etiam non urna
+			mauris, non porta ligula. Morbi fringilla varius mauris a suscipit.</p>
+
+
+
+	</section>
+
+	<footer>
+
+		<h2>This is a footer</h2>
+
+	</footer>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Form example to demonstrate CSS form
+	selectors/pseudo-classes</title>
+<link href='http://fonts.googleapis.com/css?family=Rosarivo'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: 'Rosarivo', serif;
+}
+
+form {
+	width: 800px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	text-shadow: 2px 2px 2px purple;
+}
+
+code {
+	text-shadow: 1px 1px 2px purple;
+}
+
+fieldset {
+	border: 0;
+	font-size: 1rem;
+	margin-bottom: 5%;
+	width: 370px;
+	float: left;
+}
+
+legend {
+	padding: 2%;
+}
+
+div {
+	padding-bottom: 5%;
+}
+
+div:first-of-type {
+	padding-top: 5%;
+}
+
+label {
+	width: 120px;
+	margin-right: 10px;
+	float: left;
+	clear: both;
+	text-align: right;
+}
+
+input {
+	width: 200px;
+	height: 1.2rem;
+	text-align: left;
+	text-indent: 3px;
+}
+
+/* || styling for :required and :optional */
+#name:required {
+	border: 1px solid black;
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.7);
+	background: -webkit-linear-gradient(top, #fff, #ccc);
+	background: -moz-linear-gradient(top, #fff, #ccc);
+	background: -ms-linear-gradient(top, #fff, #ccc);
+	background: -o-linear-gradient(top, #fff, #ccc);
+	background: linear-gradient(top, #fff, #ccc);
+}
+
+label[id="required"]:before {
+	content: "*";
+}
+
+#name:optional {
+	border: 1px grey dashed;
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.4);
+	opacity: 0.9;
+}
+
+/* || styling for :valid and :invalid */
+@
+-webkit-keyframes box-shake {from { -webkit-transform:translateX(2px);
+	
+}
+
+from {
+	-webkit-transform: translateX(-2px);
+}
+
+}
+@
+-moz-keyframes box-shake {from { -moz-transform:translateX(2px);
+	
+}
+
+from {
+	-moz-transform: translateX(-2px);
+}
+
+}
+@
+-ms-keyframes box-shake {from { -ms-transform:translateX(2px);
+	
+}
+
+from {
+	-ms-transform: translateX(-2px);
+}
+
+}
+@
+-o-keyframes box-shake {from { -o-transform:translateX(2px);
+	
+}
+
+from {
+	-o-transform: translateX(-2px);
+}
+
+}
+@
+keyframes box-shake {from { transform:translateX(2px);
+	
+}
+
+from {
+	transform: translateX(-2px);
+}
+
+}
+#email:invalid {
+	border: 2px solid rgb(255, 100, 100);
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.7);
+	background: -webkit-linear-gradient(top, #fff, #eee);
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: -ms-linear-gradient(top, #fff, #eee);
+	background: -o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+	-webkit-animation: box-shake 0.1s infinite;
+	-moz-animation: box-shake 0.1s infinite;
+	-ms-animation: box-shake 0.1s infinite;
+	-o-animation: box-shake 0.1s infinite;
+	animation: box-shake 0.1s infinite;
+}
+
+#email:valid {
+	border: 1px solid black;
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.7);
+	background: -webkit-linear-gradient(top, #fff, #eee);
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: -ms-linear-gradient(top, #fff, #eee);
+	background: -o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+}
+
+/* || styling for :in-range and :out-of-range */
+@
+-webkit-keyframes box-pulse {from { -webkit-transform:scale(1.03);
+	
+}
+
+from {
+	-webkit-transform: scale(0.97);
+}
+
+}
+@
+-moz-keyframes box-pulse {from { -moz-transform:scale(1.03);
+	
+}
+
+from {
+	-moz-transform: scale(0.97);
+}
+
+}
+@
+-ms-keyframes box-pulse {from { -ms-transform:scale(1.03);
+	
+}
+
+from {
+	-ms-transform: scale(0.97);
+}
+
+}
+@
+-o-keyframes box-pulse {from { -o-transform:scale(1.03);
+	
+}
+
+from {
+	-o-transform: scale(0.97);
+}
+
+}
+@
+keyframes box-pulse {from { transform:scale(1.03);
+	
+}
+
+from {
+	transform: scale(0.97);
+}
+
+}
+#number:out-of-range {
+	border: 2px solid rgb(255, 100, 100);
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.7);
+	background: -webkit-linear-gradient(top, #fff, #eee);
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: -ms-linear-gradient(top, #fff, #eee);
+	background: -o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+	-webkit-animation: box-pulse 0.8s infinite linear alternate;
+	-moz-animation: box-pulse 0.8s infinite linear alternate;
+	-ms-animation: box-pulse 0.8s infinite linear alternate;
+	-o-animation: box-pulse 0.8s infinite linear alternate;
+	animation: box-pulse 0.8s infinite linear alternate;
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	-ms-transform-origin: center;
+	-o-transform-origin: center;
+	transform-origin: center;
+}
+
+#number:in-range {
+	border: 1px solid black;
+	box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.7);
+	background: -webkit-linear-gradient(top, #fff, #eee);
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: -ms-linear-gradient(top, #fff, #eee);
+	background: -o-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<h1>CSS form selector/pseudo-class examples</h1>
+
+	<form method="post" id="example-form">
+
+		<fieldset>
+
+			<legend>
+				<code>:required</code>
+				and
+				<code>:optional</code>
+			</legend>
+
+			<div>
+				<label for="name" id="required">Name:</label> <input type="name"
+					id="name" name="name" required>
+			</div>
+
+			<div>
+				<label for="name">Name:</label> <input type="name" id="name"
+					name="name">
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+
+			<legend>
+				<code>:valid</code>
+				and
+				<code>:invalid</code>
+			</legend>
+
+			<div>
+				<label for="email">Email:</label> <input type="email" id="email"
+					name="email" required>
+			</div>
+
+			<div>
+				<label for="email">Email:</label> <input type="email" id="email"
+					name="email" required>
+			</div>
+
+		</fieldset>
+
+
+		<fieldset>
+
+			<legend>
+				<code>:in-range</code>
+				and
+				<code>:out-of-range</code>
+			</legend>
+
+			<div>
+				<label for="req-num-minmax">Number:</label> <input type="number"
+					id="number" name="number" required min="1" max="100"
+					placeholder="with min and max">
+			</div>
+
+		</fieldset>
+
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+
+
+<html lang="en-gb">
+
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Simple CSS regions example</title>
+
+<link rel="stylesheet" type="text/css" href="normalize.css">
+
+<link
+	href='http://fonts.googleapis.com/css?family=Lobster|Terminal+Dosis'
+	rel='stylesheet' type='text/css'>
+
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+/* || All the other stuff */
+html {
+	font-family: 'Terminal Dosis', sans-serif;
+	font-size: 62.5%;
+}
+
+h1,h2 {
+	font-family: 'Lobster', cursive;
+}
+
+h1 {
+	font-size: 4.8rem;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 3rem;
+}
+
+h2 {
+	font-size: 3.2rem;
+}
+
+p,li {
+	font-size: 1.4rem;
+}
+
+header,footer {
+	height: 150px;
+	width: 100%;
+	color: #FCFE03;
+	background-color: #8B2101;
+}
+
+footer h2 {
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* || grid for laying out content blocks */
+#layout {
+	display: -webkit-grid;
+	display: -moz-grid;
+	display: -ms-grid;
+	display: -o-grid;
+	display: grid;
+	-webkit-grid-columns: 30% 40% 30%;
+	-moz-grid-columns: 30% 40% 30%;
+	-ms-grid-columns: 30% 40% 30%;
+	-o-grid-columns: 30% 40% 30%;
+	grid-columns: 30% 40% 30%;
+	-webkit-grid-rows: 300px 300px 300px;
+	-moz-grid-rows: 300px 300px 300px;
+	-ms-grid-rows: 300px 300px 300px;
+	-o-grid-rows: 300px 300px 300px;
+	grid-rows: 300px 300px 300px;
+}
+
+#layout img {
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;
+}
+
+#layout #region1 {
+	-webkit-grid-column: 1;
+	-webkit-grid-row: 1;
+	-moz-grid-column: 1;
+	-moz-grid-row: 1;
+	-ms-grid-column: 1;
+	-ms-grid-row: 1;
+	-o-grid-column: 1;
+	-o-grid-row: 1;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#layout #region2 {
+	-webkit-grid-column: 2;
+	-webkit-grid-row: 1;
+	-moz-grid-column: 2;
+	-moz-grid-row: 1;
+	-ms-grid-column: 2;
+	-ms-grid-row: 1;
+	-o-grid-column: 2;
+	-o-grid-row: 1;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+#layout #region3 {
+	-webkit-grid-column: 3;
+	-webkit-grid-row: 1;
+	-moz-grid-column: 3;
+	-moz-grid-row: 1;
+	-ms-grid-column: 3;
+	-ms-grid-row: 1;
+	-o-grid-column: 3;
+	-o-grid-row: 1;
+	grid-column: 3;
+	grid-row: 1;
+}
+
+#layout #region4 {
+	-webkit-grid-column: 1;
+	-webkit-grid-column-span: 3;
+	-webkit-grid-row: 2;
+	-moz-grid-column: 1;
+	-moz-grid-column-span: 3;
+	-moz-grid-row: 2;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	-ms-grid-row: 2;
+	-o-grid-column: 1;
+	-o-grid-column-span: 3;
+	-o-grid-row: 2;
+	grid-column: 1;
+	grid-column-span: 3;
+	grid-row: 2;
+}
+
+#layout #region5 {
+	-webkit-grid-column: 1;
+	-webkit-grid-column-span: 3;
+	-webkit-grid-row: 3;
+	-moz-grid-column: 1;
+	-moz-grid-column-span: 3;
+	-moz-grid-row: 3;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	-ms-grid-row: 3;
+	-o-grid-column: 1;
+	-o-grid-column-span: 3;
+	-o-grid-row: 3;
+	grid-column: 1;
+	grid-column-span: 3;
+	grid-row: 3;
+}
+
+/* || regions for putting content into those blocks */
+#region-content {
+	-webkit-flow-into: my-regions;
+	-moz-flow-into: my-regions;
+	-ms-flow-into: my-regions;
+	-o-flow-into: my-regions;
+	flow-into: my-regions;
+}
+
+.region {
+	padding: 1rem;
+	background-color: red;
+	border: 1px solid white;
+	-webkit-flow-from: my-regions;
+	-moz-flow-from: my-regions;
+	-ms-flow-from: my-regions;
+	-o-flow-from: my-regions;
+	flow-from: my-regions;
+}
+</style>
+
+
+<!--[if lt IE 9]>
+
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+
+</script>
+
+<![endif]-->
+
+
+</head>
+
+
+<body>
+
+
+	<header>
+
+		<h1>Simple CSS regions example</h1>
+
+	</header>
+
+
+	<section id="layout">
+
+		<div id="region1" class="region"></div>
+
+		<div id="region2">
+			<img src="images/sunset.jpg" alt="sunset image">
+		</div>
+
+		<div id="region3" class="region"></div>
+
+		<div id="region4" class="region"></div>
+
+		<div id="region5" class="region"></div>
+
+	</section>
+
+
+	<footer>
+
+		<h2>This is a footer</h2>
+
+	</footer>
+
+
+	<iframe id="region-content" src="region-content.html">
+</body>
+</html>

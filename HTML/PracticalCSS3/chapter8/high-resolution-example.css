@@ -1,0 +1,129 @@
+/* || general styles */
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+body {
+	font-size: 62.5%;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+#wrap {
+	width: 800px;
+	height: 150px;
+	position: relative;
+	background: url(wood.jpg);
+	border-radius: 20px;
+	margin: 5rem auto;
+}
+
+ul {
+	width: 800px;
+	height: 150px;
+	margin: 10.4rem auto 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	float: left;
+}
+
+ul a,ul a:visited {
+	width: 400px;
+	display: inline-block;
+	line-height: 75px;
+	font-size: 2.5rem;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+	background-repeat: no-repeat;
+	font-family: 'Plaster', cursive;
+}
+
+ul a:hover,ul a:focus {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+ul a:active {
+	box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.7), inset 0 -10px 25px
+		rgba(0, 0, 0, 0.4);
+}
+
+ul li:nth-of-type(1) a {
+	background-image: url(icons/home-32.png);
+	border-radius: 20px 0 0 0;
+	background-position: 25px 50%;
+}
+
+ul li:nth-of-type(2) a {
+	background-image: url(icons/inbox-32.png);
+	border-radius: 0 20px 0 0;
+	background-position: 350px 50%;
+}
+
+ul li:nth-of-type(3) a {
+	background-image: url(icons/games-32.png);
+	border-radius: 0 0 0 20px;
+	background-position: 25px 50%;
+}
+
+ul li:nth-of-type(4) a {
+	background-image: url(icons/chat-32.png);
+	border-radius: 0 0 20px 0;
+	background-position: 350px 50%;
+}
+
+p {
+	margin-left: 20px;
+}
+
+#image {
+	position: absolute;
+	top: -165px;
+	right: -235px;
+	z-index: -1;
+}
+
+@media screen and (-o-min-device-pixel-ratio: 3/2) {
+	ul li:nth-of-type(1) a {
+		background-image: url(icons/home-48.png);
+	}
+	ul li:nth-of-type(2) a {
+		background-image: url(icons/inbox-48.png);
+	}
+	ul li:nth-of-type(3) a {
+		background-image: url(icons/games-48.png);
+	}
+	ul li:nth-of-type(4) a {
+		background-image: url(icons/chat-48.png);
+	}
+	#wrap {
+		background-size: 255px;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+	ul li:nth-of-type(1) a {
+		background-image: url(icons/home-48.png);
+	}
+	ul li:nth-of-type(2) a {
+		background-image: url(icons/inbox-48.png);
+	}
+	ul li:nth-of-type(3) a {
+		background-image: url(icons/games-48.png);
+	}
+	ul li:nth-of-type(4) a {
+		background-image: url(icons/chat-48.png);
+	}
+	#wrap {
+		background-size: 255px;
+	}
+}

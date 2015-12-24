@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+
+
+<html lang="en-gb">
+
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Simple CSS grids example</title>
+
+<link rel="stylesheet" type="text/css" href="normalize.css">
+
+<link
+	href='http://fonts.googleapis.com/css?family=Lobster|Terminal+Dosis'
+	rel='stylesheet' type='text/css'>
+
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+html {
+	font-family: 'Terminal Dosis', sans-serif;
+	font-size: 62.5%;
+}
+
+/* || CSS grids rulesets */
+body {
+	display: -webkit-grid;
+	display: -moz-grid;
+	display: -ms-grid;
+	display: -o-grid;
+	display: grid;
+	-webkit-grid-columns: 30rem 40rem 30rem;
+	-moz-grid-columns: 30rem 40rem 30rem;
+	-ms-grid-columns: 30rem 40rem 30rem;
+	-o-grid-columns: 30rem 40rem 30rem;
+	grid-columns: 30rem 40rem 30rem;
+	-webkit-grid-rows: 1fr 1fr 1fr 1fr;
+	-moz-grid-rows: 1fr 1fr 1fr 1fr;
+	-ms-grid-rows: 1fr 1fr 1fr 1fr;
+	-o-grid-rows: 1fr 1fr 1fr 1fr;
+	grid-rows: 1fr 1fr 1fr 1fr;
+}
+
+header {
+	background-color: grey;
+	-webkit-grid-column: 1;
+	-webkit-grid-column-span: 3;
+	-webkit-grid-row: 1;
+	-moz-grid-column: 1;
+	-moz-grid-column-span: 3;
+	-moz-grid-row: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	-ms-grid-row: 1;
+	-o-grid-column: 1;
+	-o-grid-column-span: 3;
+	-o-grid-row: 1;
+	grid-column: 1;
+	grid-column-span: 3;
+	grid-row: 1;
+}
+
+footer {
+	background-color: grey;
+	-webkit-grid-column: 1;
+	-webkit-grid-column-span: 3;
+	-webkit-grid-row: 4;
+	-moz-grid-column: 1;
+	-moz-grid-column-span: 3;
+	-moz-grid-row: 4;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
+	-ms-grid-row: 4;
+	-o-grid-column: 1;
+	-o-grid-column-span: 3;
+	-o-grid-row: 4;
+	grid-column: 1;
+	grid-column-span: 3;
+	grid-row: 4;
+}
+
+#block1 {
+	background-color: blue;
+	-webkit-grid-column: 1;
+	-webkit-grid-row: 2;
+	-webkit-grid-row-span: 2;
+	-moz-grid-column: 1;
+	-moz-grid-row: 2;
+	-moz-grid-row-span: 2;
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
+	-ms-grid-row-span: 2;
+	-o-grid-column: 1;
+	-o-grid-row: 2;
+	-o-grid-row-span: 2;
+	grid-column: 1;
+	grid-row: 2;
+	grid-row-span: 2;
+}
+
+#block2 {
+	background-color: red;
+	-webkit-grid-column: 2;
+	-webkit-grid-row: 2;
+	-moz-grid-column: 2;
+	-moz-grid-row: 2;
+	-ms-grid-column: 2;
+	-ms-grid-row: 2;
+	-o-grid-column: 2;
+	-o-grid-row: 2;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#block3 {
+	background-color: green;
+	-webkit-grid-column: 3;
+	-webkit-grid-row: 2;
+	-moz-grid-column: 3;
+	-moz-grid-row: 2;
+	-ms-grid-column: 3;
+	-ms-grid-row: 2;
+	-o-grid-column: 3;
+	-o-grid-row: 2;
+	grid-column: 3;
+	grid-row: 2;
+}
+
+#block4 {
+	background-color: yellow;
+	-webkit-grid-column: 2;
+	-webkit-grid-column-span: 2;
+	-webkit-grid-row: 3;
+	-moz-grid-column: 2;
+	-moz-grid-column-span: 2;
+	-moz-grid-row: 3;
+	-ms-grid-column: 2;
+	-ms-grid-column-span: 2;
+	-ms-grid-row: 3;
+	-o-grid-column: 2;
+	-o-grid-column-span: 2;
+	-o-grid-row: 3;
+	grid-column: 2;
+	grid-column-span: 2;
+	grid-row: 3;
+}
+</style>
+
+
+<!--[if lt IE 9]>
+
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+
+<![endif]-->
+
+
+
+</head>
+
+<body>
+
+	<header>
+
+		<h2>Header</h2>
+
+	</header>
+
+
+	<div id="block1">Block 1</div>
+
+	<div id="block2">Block 2</div>
+
+	<div id="block3">Block 3</div>
+
+	<div id="block4">Block 4</div>
+
+
+	<footer>
+		<h2>Footer</h2>
+	</footer>
+
+
+</body>
+</html>

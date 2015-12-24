@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Simple audio example</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+audio {
+	border: 1px solid black;
+	margin: 0rem auto;
+}
+
+body {
+	background-color: white;
+}
+
+p {
+	padding-left: 3rem;
+}
+
+#controls {
+	opacity: 1;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<div id="player">
+
+		<audio id="custom-player" controls>
+			<source src="audio/heavymetal.mp3" type="audio/mp3">
+    <source src="audio/heavymetal.ogg" type="audio/ogg">
+    <!-- fallback content here -->  
+  
+		</audio>
+
+		<div id="controls">
+			<button id="play" data-icon="P"></button>
+			<button id="stop" data-icon="S"></button>
+			<div id="timer">00:00</div>
+			<button id="rwd" data-icon="B"></button>
+			<button id="fwd" data-icon="F"></button>
+		</div>
+
+	</div>
+
+	<p>
+		Song: <q>Man of the Dragon</q> by <a
+			href="http://www.conquestofsteel.co.uk">Conquest of Steel</a>
+	</p>
+
+	<script src="custom-player.js"></script>
+
+</body>
+</html>

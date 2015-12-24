@@ -1,9 +1,8 @@
 <?php
-$life=42;
-function meaningOfLife()
-{
+$life = 42;
+function meaningOfLife() {
 	global $life;
-	echo "The meaning of life is ".$life;
+	echo "The meaning of life is " . $life;
 }
-meaningOfLife();
+meaningOfLife ();
 ?>

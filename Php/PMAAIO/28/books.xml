@@ -2,30 +2,30 @@
 <!--Sample XML document -->
 <Books>
 	<Book>
-	    <Title>A Very Good Book</Title>
-	    <Author>Jane Doe</Author>
-	    <PublishingInfo>
-		<PublisherName>Sams Publishing</PublisherName>
-		<PublisherCity>Indianapolis</PublisherCity>
-		<PublishedYear>2012</PublishedYear>
-	    </PublishingInfo>
+		<Title>A Very Good Book</Title>
+		<Author>Jane Doe</Author>
+		<PublishingInfo>
+			<PublisherName>Sams Publishing</PublisherName>
+			<PublisherCity>Indianapolis</PublisherCity>
+			<PublishedYear>2012</PublishedYear>
+		</PublishingInfo>
 	</Book>
 	<Book>
-	    <Title>An Academic Book</Title>
-	    <Author>Anne Smith</Author>
-	    <PublishingInfo>
-		<PublisherName>University of California Press</PublisherName>
-		<PublisherCity>Berkeley</PublisherCity>
-		<PublishedYear>2011</PublishedYear>
-	    </PublishingInfo>
+		<Title>An Academic Book</Title>
+		<Author>Anne Smith</Author>
+		<PublishingInfo>
+			<PublisherName>University of California Press</PublisherName>
+			<PublisherCity>Berkeley</PublisherCity>
+			<PublishedYear>2011</PublishedYear>
+		</PublishingInfo>
 	</Book>
 	<Book>
-	    <Title>Some Fluff Fiction</Title>
-	    <Author>Jimbo Jones</Author>
-	    <PublishingInfo>
-		<PublisherName>Fluffy Press</PublisherName>
-		<PublisherCity>New York</PublisherCity>
-		<PublishedYear>2009</PublishedYear>
-	    </PublishingInfo>
+		<Title>Some Fluff Fiction</Title>
+		<Author>Jimbo Jones</Author>
+		<PublishingInfo>
+			<PublisherName>Fluffy Press</PublisherName>
+			<PublisherCity>New York</PublisherCity>
+			<PublishedYear>2009</PublishedYear>
+		</PublishingInfo>
 	</Book>
 </Books>

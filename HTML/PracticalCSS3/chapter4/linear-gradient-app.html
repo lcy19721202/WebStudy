@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Linear gradient app</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link href='http://fonts.googleapis.com/css?family=Acme'
+	rel='stylesheet' type='text/css'>
+
+<style>
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Acme', sans-serif;
+	margin: 0;
+}
+
+article {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	min-width: 700px;
+	min-height: 500px;
+}
+
+h1 {
+	font-size: 50px;
+	font-size: 5rem;
+	margin: 0;
+	text-align: center;
+	padding-top: 40px;
+	padding-top: 4rem;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+p {
+	font-size: 20px;
+	font-size: 2rem;
+	text-align: center;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	padding-top: 20px;
+	padding-top: 2rem;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 20px 0 0 0;
+	padding: 2rem 0 0 0;
+}
+
+li {
+	display: inline;
+}
+
+button {
+	width: 8rem;
+	height: 2.5rem;
+	margin-right: 1rem;
+	border-radius: 8px;
+	border: 0;
+	box-shadow: 1px 1px 1px black;
+	background: -webkit-linear-gradient(top, #888, #eee);
+	background: -moz-linear-gradient(top, #888, #eee);
+	background: -ms-linear-gradient(top, #888, #eee);
+	background: -o-linear-gradient(top, #888, #eee);
+	background: linear-gradient(top, #888, #eee);
+	opacity: 0.9;
+	background-color: #eee;
+}
+
+button:hover,button:focus {
+	opacity: 1;
+}
+
+button:active {
+	box-shadow: 1px 1px 1px black, inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+button#create {
+	margin-left: 1rem;
+	width: 6rem;
+}
+
+input[type="text"] {
+	width: 60rem;
+}
+
+li:last-child {
+	position: absolute;
+	right: 1rem;
+	bottom: 2rem;
+}
+
+p:nth-of-type(2) {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.grad1 {
+	background: -webkit-linear-gradient(#ff0000, #A60000);
+	background: -moz-linear-gradient(#ff0000, #A60000);
+	background: -ms-linear-gradient(#ff0000, #A60000);
+	background: -o-linear-gradient(#ff0000, #A60000);
+	background: linear-gradient(#ff0000, #A60000);
+}
+
+.grad2 {
+	background: -webkit-linear-gradient(#ff0000, #A60000 40%, #A60000 60%, #ff0000);
+	background: -moz-linear-gradient(#ff0000, #A60000 40%, #A60000 60%, #ff0000);
+	background: -ms-linear-gradient(#ff0000, #A60000 40%, #A60000 60%, #ff0000);
+	background: -o-linear-gradient(#ff0000, #A60000 40%, #A60000 60%, #ff0000);
+	background: linear-gradient(#ff0000, #A60000 40%, #A60000 60%, #ff0000);
+}
+
+.grad3 {
+	background: -webkit-linear-gradient(top left, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0));
+	background: -moz-linear-gradient(top left, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0));
+	background: -ms-linear-gradient(top left, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0));
+	background: -o-linear-gradient(top left, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0));
+	background: linear-gradient(top left, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0));
+	background-color: #ff0000;
+}
+
+.grad4 {
+	background: -webkit-repeating-linear-gradient(60deg, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0) 10px);
+	background: -moz-repeating-linear-gradient(60deg, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0) 10px);
+	background: -ms-repeating-linear-gradient(60deg, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0) 10px);
+	background: -o-repeating-linear-gradient(60deg, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0) 10px);
+	background: repeating-linear-gradient(60deg, rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0) 10px);
+	background-color: #ff0000;
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<article class="grad1">
+		<h1>Linear gradient app!</h1>
+		<ul>
+			<li><button id="but1">Gradient 1</button></li>
+			<li><button id="but2">Gradient 2</button></li>
+			<li><button id="but3">Gradient 3</button></li>
+			<li><button id="but4">Gradient 4</button></li>
+			<li><input type="text" id="yourGradient">
+			<button id="create">Create!</button></li>
+		</ul>
+
+		<p>
+			<code>background: linear-gradient(#ff0000,#A60000);</code>
+		</p>
+
+		<p>
+			Create your own! Try inserting a
+			<code>linear-gradient(&hellip;);</code>
+			or
+			<code>repeating-linear-gradient(&hellip;);</code>
+			value into the form input below and then pressing "Create". If the
+			background goes white, you'll know your syntax has an error in it
+			somewhere.
+		</p>
+	</article>
+
+	<script type="text/javascript">
+      var b = document.getElementsByTagName("article");
+      var article = b[0];
+      
+      var p = document.getElementsByTagName("p");
+      var para = p[0];
+      
+      var f = document.getElementById("yourGradient");
+      
+      
+      var create = document.getElementById("create");   
+      create.addEventListener("click", setYourGradient, false);      
+      
+      
+      
+      var el1 = document.getElementById("but1");   
+      el1.addEventListener("click", gradient1, false);
+      
+      function gradient1() {
+        article.setAttribute("class","grad1");
+        para.innerHTML = "<code>background: linear-gradient(#ff0000,#A60000);</code>";
+      }
+      
+      var el2 = document.getElementById("but2");   
+      el2.addEventListener("click", gradient2, false);
+      
+      function gradient2() {
+        article.setAttribute("class","grad2");
+        para.innerHTML = "<code>background: linear-gradient(#ff0000,#A60000 40%,#A60000 60%,#ff0000);</code>";
+      }
+      
+      var el3 = document.getElementById("but3");   
+      el3.addEventListener("click", gradient3, false);
+      
+      function gradient3() {
+        article.setAttribute("class","grad3");
+        para.innerHTML = "<code>background: linear-gradient(to bottom right, rgba(0,0,0,0.4),rgba(0,0,0,0));<br>background-color: #ff0000;</code>";
+      }
+      
+      var el4 = document.getElementById("but4");   
+      el4.addEventListener("click", gradient4, false);
+      
+      function gradient4() {
+        article.setAttribute("class","grad4");
+        para.innerHTML = "<code>background: repeating-linear-gradient(60deg, rgba(0,0,0,0.4),rgba(0,0,0,0) 10px);<br>background-color: #ff0000;</code>";
+      }
+      
+      function setYourGradient() {
+        var gradValue = f.value;
+        if(gradValue.length === 0) {
+          gradient1();
+        } else {
+          document.styleSheets[1].deleteRule(0);
+          document.styleSheets[1].insertRule(".usergrad { background: -webkit-" + gradValue + " background: -moz-" + gradValue +" background: -ms-" + gradValue +" background: -o-" + gradValue +" background: " + gradValue +"}", 0);
+        article.setAttribute("class","usergrad");
+        para.innerHTML = "<code>background: " + gradValue + "</code>";
+        }
+      }
+
+      
+    
+    </script>
+
+</body>
+</html>

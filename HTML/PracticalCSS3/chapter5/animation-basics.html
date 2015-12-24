@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>Animated menu</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<style>
+
+/* || font import */
+@font-face {
+	font-family: 'SansationRegular';
+	src: url('fonts/sansation_regular-webfont.eot');
+	src: url('fonts/sansation_regular-webfont.eot?#iefix')
+		format('embedded-opentype'),
+		url('fonts/sansation_regular-webfont.woff') format('woff'),
+		url('fonts/sansation_regular-webfont.ttf') format('truetype'),
+		url('fonts/sansation_regular-webfont.svg#SansationRegular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* || Animation keyframes */
+@
+-webkit-keyframes menu-move {from { -webkit-transform:translateY(-200px);
+	
+}
+
+to {
+	-webkit-transform: translateY(0px);
+}
+
+}
+@
+-moz-keyframes menu-move {from { -moz-transform:translateY(-200px);
+	
+}
+
+to {
+	-moz-transform: translateY(0px);
+}
+
+}
+@
+-ms-keyframes menu-move {from { -ms-transform:translateY(-200px);
+	
+}
+
+to {
+	-ms-transform: translateY(0px);
+}
+
+}
+@
+-o-keyframes menu-move {from { -o-transform:translateY(-200px);
+	
+}
+
+to {
+	-o-transform: translateY(0px);
+}
+
+}
+@
+keyframes menu-move {from { transform:translateY(-200px);
+	
+}
+
+to {
+	transform: translateY(0px);
+}
+
+}
+@
+-webkit-keyframes button-glow { 0% {
+	color: #000;
+	background-color: #E69EE0;
+}
+
+50%
+{
+color
+:
+ 
+#666
+;background-color
+:
+ 
+#FFEEEE
+;
+ 
+}
+100%
+{
+color
+:
+ 
+#000
+;background-color
+:
+ 
+#E69EE0
+;
+ 
+}
+}
+@
+-moz-keyframes button-glow { 0% {
+	color: #000;
+	background-color: #E69EE0;
+}
+
+50%
+{
+color
+:
+ 
+#666
+;background-color
+:
+ 
+#FFEEEE
+;
+ 
+}
+100%
+{
+color
+:
+ 
+#000
+;background-color
+:
+ 
+#E69EE0
+;
+ 
+}
+}
+@
+-ms-keyframes button-glow { 0% {
+	color: #000;
+	background-color: #E69EE0;
+}
+
+50%
+{
+color
+:
+ 
+#666
+;background-color
+:
+ 
+#FFEEEE
+;
+ 
+}
+100%
+{
+color
+:
+ 
+#000
+;background-color
+:
+ 
+#E69EE0
+;
+ 
+}
+}
+@
+-o-keyframes button-glow { 0% {
+	color: #000;
+	background-color: #E69EE0;
+}
+
+50%
+{
+color
+:
+ 
+#666
+;background-color
+:
+ 
+#FFEEEE
+;
+ 
+}
+100%
+{
+color
+:
+ 
+#000
+;background-color
+:
+ 
+#E69EE0
+;
+ 
+}
+}
+@
+keyframes button-glow { 0% {
+	color: #000;
+	background-color: #E69EE0;
+}
+
+50%
+{
+color
+:
+ 
+#666
+;background-color
+:
+ 
+#FFEEEE
+;
+ 
+}
+100%
+{
+color
+:
+ 
+#000
+;background-color
+:
+ 
+#E69EE0
+;
+ 
+}
+}
+
+/* || The rest of the stuff */
+article,aside,audio,canvas,datalist,details,figcaption,figure,footer,header,hgroup,menu,nav,section,video
+	{
+	display: block;
+}
+
+body {
+	font-size: 62.5%;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	width: 80%;
+	list-style-type: none;
+	margin: 50px auto;
+	margin: 3rem auto;
+	min-width: 700px;
+	-webkit-animation-name: menu-move;
+	-moz-animation-name: menu-move;
+	-ms-animation-name: menu-move;
+	-o-animation-name: menu-move;
+	animation-name: menu-move;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;
+}
+
+li {
+	display: inline;
+}
+
+a,a:visited {
+	display: inline-block;
+	width: 18%;
+	line-height: 30px;
+	line-height: 3rem;
+	margin-right: -3px;
+	border: 1px solid #666;
+	font-size: 13px;
+	font-size: 1.1rem;
+	font-family: SansationRegular, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 70%);
+	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 70%);
+	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4) 70%);
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)
+		70%);
+	background: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)
+		70%);
+	background-color: #E69EE0;
+	color: black;
+	box-shadow: inset 0 -10px 25px rgba(0, 0, 0, 0.4);
+	text-shadow: 1px 1px -1px rgba(255, 255, 255, 0.4);
+}
+
+li:first-child a {
+	border-radius: 15px 0 0 15px;
+}
+
+li:last-child a {
+	border-radius: 0 15px 15px 0;
+	margin: 0;
+}
+
+a:hover,a:focus {
+	background-color: #FFEEEE;
+	-webkit-animation-name: button-glow;
+	-moz-animation-name: button-glow;
+	-ms-animation-name: button-glow;
+	-o-animation-name: button-glow;
+	animation-name: button-glow;
+	-webkit-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;
+	-ms-animation-duration: 1.5s;
+	-o-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-ms-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+a:active {
+	box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.7), inset 0 -10px 25px
+		rgba(0, 0, 0, 0.4);
+}
+</style>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+
+</head>
+<body>
+
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact me!</a></li>
+	</ul>
+
+
+</body>
+</html>
